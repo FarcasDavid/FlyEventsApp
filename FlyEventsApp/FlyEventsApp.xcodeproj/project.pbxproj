@@ -13,9 +13,13 @@
 		AB7D31B32B7E41F6001278B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB7D31B22B7E41F6001278B0 /* Assets.xcassets */; };
 		AB7D31B62B7E41F6001278B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB7D31B42B7E41F6001278B0 /* LaunchScreen.storyboard */; };
 		AB7D31C12B7E4361001278B0 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = AB7D31C02B7E4361001278B0 /* .swiftlint.yml */; };
+		E863E46F331B0FB662A9ECF6 /* Pods_FlyEventsApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60C4816CBAD2B9641886C19D /* Pods_FlyEventsApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		164E7DA43140207A07F0F6D8 /* Pods-FlyEventsApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlyEventsApp.debug.xcconfig"; path = "Target Support Files/Pods-FlyEventsApp/Pods-FlyEventsApp.debug.xcconfig"; sourceTree = "<group>"; };
+		60C4816CBAD2B9641886C19D /* Pods_FlyEventsApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlyEventsApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		68EF8C9FFB42844B62A60B16 /* Pods-FlyEventsApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlyEventsApp.release.xcconfig"; path = "Target Support Files/Pods-FlyEventsApp/Pods-FlyEventsApp.release.xcconfig"; sourceTree = "<group>"; };
 		AB3872322B7E638E00B5B0F8 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		AB3872332B7E638E00B5B0F8 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		AB7D31A62B7E41F4001278B0 /* FlyEventsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlyEventsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -31,12 +35,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E863E46F331B0FB662A9ECF6 /* Pods_FlyEventsApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7E6EFE088EBA76C343568A8F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				164E7DA43140207A07F0F6D8 /* Pods-FlyEventsApp.debug.xcconfig */,
+				68EF8C9FFB42844B62A60B16 /* Pods-FlyEventsApp.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		941D5BF1A4F76D0344723BD2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				60C4816CBAD2B9641886C19D /* Pods_FlyEventsApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		AB3872312B7E635600B5B0F8 /* MainViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -92,8 +114,11 @@
 		AB7D319D2B7E41F4001278B0 = {
 			isa = PBXGroup;
 			children = (
+				AB7D31C02B7E4361001278B0 /* .swiftlint.yml */,
 				AB7D31A82B7E41F4001278B0 /* FlyEventsApp */,
 				AB7D31A72B7E41F4001278B0 /* Products */,
+				7E6EFE088EBA76C343568A8F /* Pods */,
+				941D5BF1A4F76D0344723BD2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -118,7 +143,6 @@
 				AB7D31B72B7E41F6001278B0 /* Info.plist */,
 				AB7D31A92B7E41F4001278B0 /* AppDelegate.swift */,
 				AB7D31B42B7E41F6001278B0 /* LaunchScreen.storyboard */,
-				AB7D31C02B7E4361001278B0 /* .swiftlint.yml */,
 			);
 			path = FlyEventsApp;
 			sourceTree = "<group>";
@@ -130,10 +154,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AB7D31BA2B7E41F6001278B0 /* Build configuration list for PBXNativeTarget "FlyEventsApp" */;
 			buildPhases = (
+				B3B34032766DBFE11019B284 /* [CP] Check Pods Manifest.lock */,
 				AB7D31A22B7E41F4001278B0 /* Sources */,
 				AB7D31A32B7E41F4001278B0 /* Frameworks */,
 				AB7D31A42B7E41F4001278B0 /* Resources */,
 				AB7D31BD2B7E428F001278B0 /* SwiftLint */,
+				C5606AA492E46D0C487025DD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -210,6 +236,45 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+		B3B34032766DBFE11019B284 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FlyEventsApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C5606AA492E46D0C487025DD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FlyEventsApp/Pods-FlyEventsApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FlyEventsApp/Pods-FlyEventsApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FlyEventsApp/Pods-FlyEventsApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -358,6 +423,7 @@
 		};
 		AB7D31BB2B7E41F6001278B0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 164E7DA43140207A07F0F6D8 /* Pods-FlyEventsApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -387,6 +453,7 @@
 		};
 		AB7D31BC2B7E41F6001278B0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 68EF8C9FFB42844B62A60B16 /* Pods-FlyEventsApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
