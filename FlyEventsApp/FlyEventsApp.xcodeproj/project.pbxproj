@@ -8,11 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		AB3872342B7E638E00B5B0F8 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3872322B7E638E00B5B0F8 /* MainViewController.swift */; };
-		AB3872352B7E638E00B5B0F8 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB3872332B7E638E00B5B0F8 /* MainViewController.xib */; };
 		AB7D31AA2B7E41F4001278B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7D31A92B7E41F4001278B0 /* AppDelegate.swift */; };
 		AB7D31B32B7E41F6001278B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB7D31B22B7E41F6001278B0 /* Assets.xcassets */; };
 		AB7D31B62B7E41F6001278B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB7D31B42B7E41F6001278B0 /* LaunchScreen.storyboard */; };
 		AB7D31C12B7E4361001278B0 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = AB7D31C02B7E4361001278B0 /* .swiftlint.yml */; };
+		ABC74D092B862E1D0003E699 /* MainViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABC74D082B862E1D0003E699 /* MainViewController.storyboard */; };
 		E863E46F331B0FB662A9ECF6 /* Pods_FlyEventsApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60C4816CBAD2B9641886C19D /* Pods_FlyEventsApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -21,13 +21,13 @@
 		60C4816CBAD2B9641886C19D /* Pods_FlyEventsApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlyEventsApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		68EF8C9FFB42844B62A60B16 /* Pods-FlyEventsApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlyEventsApp.release.xcconfig"; path = "Target Support Files/Pods-FlyEventsApp/Pods-FlyEventsApp.release.xcconfig"; sourceTree = "<group>"; };
 		AB3872322B7E638E00B5B0F8 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		AB3872332B7E638E00B5B0F8 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		AB7D31A62B7E41F4001278B0 /* FlyEventsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlyEventsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB7D31A92B7E41F4001278B0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AB7D31B22B7E41F6001278B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AB7D31B52B7E41F6001278B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AB7D31B72B7E41F6001278B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AB7D31C02B7E4361001278B0 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		ABC74D082B862E1D0003E699 /* MainViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainViewController.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,7 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				AB3872322B7E638E00B5B0F8 /* MainViewController.swift */,
-				AB3872332B7E638E00B5B0F8 /* MainViewController.xib */,
+				ABC74D082B862E1D0003E699 /* MainViewController.storyboard */,
 			);
 			path = MainViewController;
 			sourceTree = "<group>";
@@ -216,10 +216,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABC74D092B862E1D0003E699 /* MainViewController.storyboard in Resources */,
 				AB7D31C12B7E4361001278B0 /* .swiftlint.yml in Resources */,
 				AB7D31B62B7E41F6001278B0 /* LaunchScreen.storyboard in Resources */,
 				AB7D31B32B7E41F6001278B0 /* Assets.xcassets in Resources */,
-				AB3872352B7E638E00B5B0F8 /* MainViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
