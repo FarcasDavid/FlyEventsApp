@@ -59,6 +59,17 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		AB1B66E72B861F8A005B5BDE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				AB7D31B72B7E41F6001278B0 /* Info.plist */,
+				AB7D31A92B7E41F4001278B0 /* AppDelegate.swift */,
+				AB7D31B42B7E41F6001278B0 /* LaunchScreen.storyboard */,
+				AB7D31B22B7E41F6001278B0 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		AB3872312B7E635600B5B0F8 /* MainViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -139,10 +150,7 @@
 				AB3872392B7E651700B5B0F8 /* Networking */,
 				AB38723A2B7E652000B5B0F8 /* Data */,
 				AB38723B2B7E652500B5B0F8 /* Extensions */,
-				AB7D31B22B7E41F6001278B0 /* Assets.xcassets */,
-				AB7D31B72B7E41F6001278B0 /* Info.plist */,
-				AB7D31A92B7E41F4001278B0 /* AppDelegate.swift */,
-				AB7D31B42B7E41F6001278B0 /* LaunchScreen.storyboard */,
+				AB1B66E72B861F8A005B5BDE /* Resources */,
 			);
 			path = FlyEventsApp;
 			sourceTree = "<group>";
@@ -432,7 +440,7 @@
 				DEVELOPMENT_TEAM = K6T99F46C8;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = FlyEventsApp/Info.plist;
+				INFOPLIST_FILE = "/Users/davidfarcas/Desktop/SWIFT PROJECTS/FlyEventsApp/FlyEventsApp/FlyEventsApp/Resources/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIStatusBarStyle = "";
@@ -462,7 +470,7 @@
 				DEVELOPMENT_TEAM = K6T99F46C8;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = FlyEventsApp/Info.plist;
+				INFOPLIST_FILE = "/Users/davidfarcas/Desktop/SWIFT PROJECTS/FlyEventsApp/FlyEventsApp/FlyEventsApp/Resources/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIStatusBarStyle = "";
