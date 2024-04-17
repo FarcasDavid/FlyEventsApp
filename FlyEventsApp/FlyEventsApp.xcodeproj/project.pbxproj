@@ -7,12 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AB3872342B7E638E00B5B0F8 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3872322B7E638E00B5B0F8 /* MainViewController.swift */; };
+		AB1FF2A02BCEB1610000652E /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1FF29F2BCEB1610000652E /* Validator.swift */; };
+		AB26FCEE2BCFFE9700E0F429 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB26FCED2BCFFE9700E0F429 /* UserModel.swift */; };
+		AB280EC52BC97BC200EE0FE1 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB280EC42BC97BC200EE0FE1 /* AuthService.swift */; };
+		AB280EC72BC97C7A00EE0FE1 /* RegisterUserRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB280EC62BC97C7A00EE0FE1 /* RegisterUserRequest.swift */; };
+		AB3872342B7E638E00B5B0F8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3872322B7E638E00B5B0F8 /* HomeViewController.swift */; };
+		AB5180262BC8F90F007879F2 /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5180252BC8F90F007879F2 /* AlertManager.swift */; };
 		AB7D31AA2B7E41F4001278B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7D31A92B7E41F4001278B0 /* AppDelegate.swift */; };
 		AB7D31B32B7E41F6001278B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB7D31B22B7E41F6001278B0 /* Assets.xcassets */; };
 		AB7D31B62B7E41F6001278B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB7D31B42B7E41F6001278B0 /* LaunchScreen.storyboard */; };
 		AB7D31C12B7E4361001278B0 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = AB7D31C02B7E4361001278B0 /* .swiftlint.yml */; };
-		ABC74D092B862E1D0003E699 /* MainViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABC74D082B862E1D0003E699 /* MainViewController.storyboard */; };
+		AB7F171C2BC661A600EC5145 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7F171B2BC661A600EC5145 /* LoginViewController.swift */; };
+		AB7F171E2BC661B600EC5145 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7F171D2BC661B600EC5145 /* RegisterViewController.swift */; };
+		AB7F17202BC661C100EC5145 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7F171F2BC661C100EC5145 /* ForgotPasswordViewController.swift */; };
+		AB7F17222BC6656100EC5145 /* AuthHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7F17212BC6656100EC5145 /* AuthHeaderView.swift */; };
+		AB7F17252BC690EB00EC5145 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7F17242BC690EB00EC5145 /* CustomTextField.swift */; };
+		AB7F17272BC6A1FA00EC5145 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7F17262BC6A1FA00EC5145 /* CustomButton.swift */; };
+		AB7F17292BC6AFD100EC5145 /* WebViewerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7F17282BC6AFD000EC5145 /* WebViewerController.swift */; };
+		ABC74D092B862E1D0003E699 /* HomeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABC74D082B862E1D0003E699 /* HomeViewController.storyboard */; };
+		ABFCC86A2BC14EAB0013A472 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ABFCC8692BC14EAB0013A472 /* GoogleService-Info.plist */; };
+		ABFFB5372BCE87ED00A30E78 /* LoginUserRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABFFB5362BCE87ED00A30E78 /* LoginUserRequest.swift */; };
+		ABFFB5392BCE93E800A30E78 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABFFB5382BCE93E800A30E78 /* SceneDelegate.swift */; };
 		E863E46F331B0FB662A9ECF6 /* Pods_FlyEventsApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60C4816CBAD2B9641886C19D /* Pods_FlyEventsApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -20,14 +35,29 @@
 		164E7DA43140207A07F0F6D8 /* Pods-FlyEventsApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlyEventsApp.debug.xcconfig"; path = "Target Support Files/Pods-FlyEventsApp/Pods-FlyEventsApp.debug.xcconfig"; sourceTree = "<group>"; };
 		60C4816CBAD2B9641886C19D /* Pods_FlyEventsApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlyEventsApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		68EF8C9FFB42844B62A60B16 /* Pods-FlyEventsApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlyEventsApp.release.xcconfig"; path = "Target Support Files/Pods-FlyEventsApp/Pods-FlyEventsApp.release.xcconfig"; sourceTree = "<group>"; };
-		AB3872322B7E638E00B5B0F8 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		AB1FF29D2BCEAC670000652E /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AB1FF29F2BCEB1610000652E /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
+		AB26FCED2BCFFE9700E0F429 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		AB280EC42BC97BC200EE0FE1 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		AB280EC62BC97C7A00EE0FE1 /* RegisterUserRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUserRequest.swift; sourceTree = "<group>"; };
+		AB3872322B7E638E00B5B0F8 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		AB5180252BC8F90F007879F2 /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
 		AB7D31A62B7E41F4001278B0 /* FlyEventsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlyEventsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB7D31A92B7E41F4001278B0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AB7D31B22B7E41F6001278B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AB7D31B52B7E41F6001278B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		AB7D31B72B7E41F6001278B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AB7D31C02B7E4361001278B0 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
-		ABC74D082B862E1D0003E699 /* MainViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainViewController.storyboard; sourceTree = "<group>"; };
+		AB7F171B2BC661A600EC5145 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		AB7F171D2BC661B600EC5145 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		AB7F171F2BC661C100EC5145 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
+		AB7F17212BC6656100EC5145 /* AuthHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AuthHeaderView.swift; path = FlyEventsApp/Views/AuthHeaderView.swift; sourceTree = SOURCE_ROOT; };
+		AB7F17242BC690EB00EC5145 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		AB7F17262BC6A1FA00EC5145 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		AB7F17282BC6AFD000EC5145 /* WebViewerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewerController.swift; sourceTree = "<group>"; };
+		ABC74D082B862E1D0003E699 /* HomeViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeViewController.storyboard; sourceTree = "<group>"; };
+		ABFCC8692BC14EAB0013A472 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		ABFFB5362BCE87ED00A30E78 /* LoginUserRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUserRequest.swift; sourceTree = "<group>"; };
+		ABFFB5382BCE93E800A30E78 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +92,9 @@
 		AB1B66E72B861F8A005B5BDE /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				AB7D31B72B7E41F6001278B0 /* Info.plist */,
+				AB1FF29D2BCEAC670000652E /* Info.plist */,
+				ABFCC8692BC14EAB0013A472 /* GoogleService-Info.plist */,
+				ABFFB5382BCE93E800A30E78 /* SceneDelegate.swift */,
 				AB7D31A92B7E41F4001278B0 /* AppDelegate.swift */,
 				AB7D31B42B7E41F6001278B0 /* LaunchScreen.storyboard */,
 				AB7D31B22B7E41F6001278B0 /* Assets.xcassets */,
@@ -70,19 +102,23 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		AB3872312B7E635600B5B0F8 /* MainViewController */ = {
+		AB3872312B7E635600B5B0F8 /* HomeViewController */ = {
 			isa = PBXGroup;
 			children = (
-				AB3872322B7E638E00B5B0F8 /* MainViewController.swift */,
-				ABC74D082B862E1D0003E699 /* MainViewController.storyboard */,
+				AB3872322B7E638E00B5B0F8 /* HomeViewController.swift */,
+				ABC74D082B862E1D0003E699 /* HomeViewController.storyboard */,
 			);
-			path = MainViewController;
+			path = HomeViewController;
 			sourceTree = "<group>";
 		};
 		AB3872362B7E64E800B5B0F8 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				AB3872312B7E635600B5B0F8 /* MainViewController */,
+				AB3872312B7E635600B5B0F8 /* HomeViewController */,
+				AB7F171B2BC661A600EC5145 /* LoginViewController.swift */,
+				AB7F171D2BC661B600EC5145 /* RegisterViewController.swift */,
+				AB7F171F2BC661C100EC5145 /* ForgotPasswordViewController.swift */,
+				AB7F17282BC6AFD000EC5145 /* WebViewerController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -92,13 +128,6 @@
 			children = (
 			);
 			path = ViewModels;
-			sourceTree = "<group>";
-		};
-		AB3872382B7E650E00B5B0F8 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 		AB3872392B7E651700B5B0F8 /* Networking */ = {
@@ -111,6 +140,12 @@
 		AB38723A2B7E652000B5B0F8 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				AB5180252BC8F90F007879F2 /* AlertManager.swift */,
+				AB280EC42BC97BC200EE0FE1 /* AuthService.swift */,
+				AB280EC62BC97C7A00EE0FE1 /* RegisterUserRequest.swift */,
+				ABFFB5362BCE87ED00A30E78 /* LoginUserRequest.swift */,
+				AB1FF29F2BCEB1610000652E /* Validator.swift */,
+				AB26FCED2BCFFE9700E0F429 /* UserModel.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -146,13 +181,23 @@
 			children = (
 				AB3872362B7E64E800B5B0F8 /* ViewControllers */,
 				AB3872372B7E650000B5B0F8 /* ViewModels */,
-				AB3872382B7E650E00B5B0F8 /* Views */,
+				AB7F17232BC6658E00EC5145 /* Views */,
 				AB3872392B7E651700B5B0F8 /* Networking */,
 				AB38723A2B7E652000B5B0F8 /* Data */,
 				AB38723B2B7E652500B5B0F8 /* Extensions */,
 				AB1B66E72B861F8A005B5BDE /* Resources */,
 			);
 			path = FlyEventsApp;
+			sourceTree = "<group>";
+		};
+		AB7F17232BC6658E00EC5145 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AB7F17212BC6656100EC5145 /* AuthHeaderView.swift */,
+				AB7F17242BC690EB00EC5145 /* CustomTextField.swift */,
+				AB7F17262BC6A1FA00EC5145 /* CustomButton.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -174,6 +219,8 @@
 			dependencies = (
 			);
 			name = FlyEventsApp;
+			packageProductDependencies = (
+			);
 			productName = FlyEventsApp;
 			productReference = AB7D31A62B7E41F4001278B0 /* FlyEventsApp.app */;
 			productType = "com.apple.product-type.application";
@@ -202,6 +249,8 @@
 				Base,
 			);
 			mainGroup = AB7D319D2B7E41F4001278B0;
+			packageReferences = (
+			);
 			productRefGroup = AB7D31A72B7E41F4001278B0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -216,8 +265,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ABC74D092B862E1D0003E699 /* MainViewController.storyboard in Resources */,
+				ABC74D092B862E1D0003E699 /* HomeViewController.storyboard in Resources */,
 				AB7D31C12B7E4361001278B0 /* .swiftlint.yml in Resources */,
+				ABFCC86A2BC14EAB0013A472 /* GoogleService-Info.plist in Resources */,
 				AB7D31B62B7E41F6001278B0 /* LaunchScreen.storyboard in Resources */,
 				AB7D31B32B7E41F6001278B0 /* Assets.xcassets in Resources */,
 			);
@@ -291,8 +341,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB7F17252BC690EB00EC5145 /* CustomTextField.swift in Sources */,
+				ABFFB5392BCE93E800A30E78 /* SceneDelegate.swift in Sources */,
+				AB7F171C2BC661A600EC5145 /* LoginViewController.swift in Sources */,
+				AB5180262BC8F90F007879F2 /* AlertManager.swift in Sources */,
+				AB7F17222BC6656100EC5145 /* AuthHeaderView.swift in Sources */,
+				AB7F17202BC661C100EC5145 /* ForgotPasswordViewController.swift in Sources */,
+				AB280EC52BC97BC200EE0FE1 /* AuthService.swift in Sources */,
+				AB1FF2A02BCEB1610000652E /* Validator.swift in Sources */,
+				AB7F17272BC6A1FA00EC5145 /* CustomButton.swift in Sources */,
 				AB7D31AA2B7E41F4001278B0 /* AppDelegate.swift in Sources */,
-				AB3872342B7E638E00B5B0F8 /* MainViewController.swift in Sources */,
+				AB26FCEE2BCFFE9700E0F429 /* UserModel.swift in Sources */,
+				AB3872342B7E638E00B5B0F8 /* HomeViewController.swift in Sources */,
+				AB280EC72BC97C7A00EE0FE1 /* RegisterUserRequest.swift in Sources */,
+				ABFFB5372BCE87ED00A30E78 /* LoginUserRequest.swift in Sources */,
+				AB7F17292BC6AFD100EC5145 /* WebViewerController.swift in Sources */,
+				AB7F171E2BC661B600EC5145 /* RegisterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -446,11 +510,75 @@
 				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-l\"c++\"",
+					"-l\"z\"",
+					"-framework",
+					"\"Alamofire\"",
+					"-framework",
+					"\"CFNetwork\"",
+					"-framework",
+					"\"FBLPromises\"",
+					"-framework",
+					"\"FirebaseAppCheckInterop\"",
+					"-framework",
+					"\"FirebaseAuth\"",
+					"-framework",
+					"\"FirebaseAuthInterop\"",
+					"-framework",
+					"\"FirebaseCore\"",
+					"-framework",
+					"\"FirebaseCoreExtension\"",
+					"-framework",
+					"\"FirebaseCoreInternal\"",
+					"-framework",
+					"\"FirebaseFirestore\"",
+					"-framework",
+					"\"FirebaseFirestoreInternal\"",
+					"-framework",
+					"\"FirebaseSharedSwift\"",
+					"-framework",
+					"\"FirebaseStorage\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"GTMSessionFetcher\"",
+					"-framework",
+					"\"GoogleUtilities\"",
+					"-framework",
+					"\"RecaptchaInterop\"",
+					"-framework",
+					"\"SafariServices\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+					"-framework",
+					"\"absl\"",
+					"-framework",
+					"\"grpc\"",
+					"-framework",
+					"\"grpcpp\"",
+					"-framework",
+					"\"leveldb\"",
+					"-framework",
+					"\"nanopb\"",
+					"-framework",
+					"\"openssl_grpc\"",
+					"-weak_framework",
+					"\"FirebaseFirestoreInternal\"",
+					"-ld_classic",
+					"-Wl",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.DavidFarcas.FlyEventsApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -476,11 +604,75 @@
 				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-l\"c++\"",
+					"-l\"z\"",
+					"-framework",
+					"\"Alamofire\"",
+					"-framework",
+					"\"CFNetwork\"",
+					"-framework",
+					"\"FBLPromises\"",
+					"-framework",
+					"\"FirebaseAppCheckInterop\"",
+					"-framework",
+					"\"FirebaseAuth\"",
+					"-framework",
+					"\"FirebaseAuthInterop\"",
+					"-framework",
+					"\"FirebaseCore\"",
+					"-framework",
+					"\"FirebaseCoreExtension\"",
+					"-framework",
+					"\"FirebaseCoreInternal\"",
+					"-framework",
+					"\"FirebaseFirestore\"",
+					"-framework",
+					"\"FirebaseFirestoreInternal\"",
+					"-framework",
+					"\"FirebaseSharedSwift\"",
+					"-framework",
+					"\"FirebaseStorage\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"GTMSessionFetcher\"",
+					"-framework",
+					"\"GoogleUtilities\"",
+					"-framework",
+					"\"RecaptchaInterop\"",
+					"-framework",
+					"\"SafariServices\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+					"-framework",
+					"\"absl\"",
+					"-framework",
+					"\"grpc\"",
+					"-framework",
+					"\"grpcpp\"",
+					"-framework",
+					"\"leveldb\"",
+					"-framework",
+					"\"nanopb\"",
+					"-framework",
+					"\"openssl_grpc\"",
+					"-weak_framework",
+					"\"FirebaseFirestoreInternal\"",
+					"-ld_classic",
+					"-Wl",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.DavidFarcas.FlyEventsApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
