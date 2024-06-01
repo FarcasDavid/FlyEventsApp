@@ -26,12 +26,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         self.window = window
         self.window?.makeKeyAndVisible()
     }
-
     func checkAuthentication() {
         if Auth.auth().currentUser == nil {
             self.goToViewController(with: LoginViewController())
         } else {
-            self.goToViewController(with: HomeViewController())
+            let chooseEventViewController = ChooseEventViewController.instantiate()
+            self.goToViewController(with: chooseEventViewController)
         }
     }
 
@@ -42,7 +42,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
             } completion: { [weak self] _ in
 
-                let nav = UINavigationController(rootViewController: viewController)
+                let nav = viewController.navEmbedded
                 nav.modalPresentationStyle = .fullScreen
                 self?.window?.rootViewController = nav
 

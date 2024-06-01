@@ -193,7 +193,7 @@ extension RegisterViewController: UITextViewDelegate {
     }
 
     private func showWebViewerController(with urlString: String) {
-        let viewcontroller = WebViewerController(with: urlString)
+        let viewcontroller = TermsAndPrivacyViewController(with: urlString)
         let nav = UINavigationController(rootViewController: viewcontroller)
         self.present(nav, animated: true, completion: nil)
     }
