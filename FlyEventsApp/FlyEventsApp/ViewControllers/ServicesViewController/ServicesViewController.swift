@@ -10,6 +10,7 @@ import FirebaseFirestore
 import FirebaseStorage
 
 class ServicesViewController: UIViewController {
+
     @IBOutlet private weak var servicesTableView: UITableView!
     @IBOutlet private weak var djSectionButton: UIButton!
     @IBOutlet private weak var barSectionButton: UIButton!
@@ -23,6 +24,7 @@ class ServicesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        setupUI()
         loadAllData()
     }
 
@@ -30,12 +32,31 @@ class ServicesViewController: UIViewController {
 
 extension ServicesViewController {
 
+   private func setupUI() {
+        djSectionButton.isEnabled = false
+        barSectionButton.isEnabled = false
+        fotoSectionButton.isEnabled = false
+        decorSectionButton.isEnabled = false
+    }
 
-        func loadAllData() {
+    private func enableButtons() {
+        djSectionButton.isEnabled = true
+        barSectionButton.isEnabled = true
+        fotoSectionButton.isEnabled = true
+        decorSectionButton.isEnabled = true
+    }
+
+}
+
+extension ServicesViewController {
+
+
+       private func loadAllData() {
             viewModel.getServices(from: event) { isLoaded in
                 if isLoaded {
                     DispatchQueue.main.async {
                         self.servicesTableView.reloadData()
+                        self.enableButtons()
                     }
                 }
             }
@@ -44,7 +65,6 @@ extension ServicesViewController {
 }
 
 extension ServicesViewController {
-    // MARK: Actions
 
     @IBAction private func didTapDJ(_ sender: Any) {
         let indexPath = IndexPath(row: 0, section: 0)
@@ -93,8 +113,42 @@ extension ServicesViewController: UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        switch indexPath.section {
+        case 0:
+            goToDjDescritpionViewController()
+        case 1:
+            goToBarDescriptionViewController()
+        case 2:
+            goToFotoDescritpionViewController()
+        case 3:
+            goToDecorDescritpionViewController()
+        default:
+            return
+        }
+
 
     }
 
+   private func goToDjDescritpionViewController() {
+        let viewController = DjDescriptionViewController.instantiate()
+        present(viewController, animated: true)
+
+    }
+
+    private func goToBarDescriptionViewController() {
+        let viewController = BarDescriptionViewController.instantiate()
+        present(viewController, animated: true)
+
+    }
+
+    private func goToFotoDescritpionViewController() {
+        let viewController = FotoDescriptionViewController.instantiate()
+        present(viewController, animated: true)
+    }
+
+    private func goToDecorDescritpionViewController() {
+        let viewController = DecorDescriptionViewController.instantiate()
+        present(viewController, animated: true)
+    }
 
 }

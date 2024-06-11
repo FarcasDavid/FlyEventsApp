@@ -61,8 +61,8 @@
                                             <action selector="didTapDJ:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="tX6-9j-WLY"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N3b-cb-ij8">
-                                        <rect key="frame" x="121" y="0.0" width="150" height="60"/>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N3b-cb-ij8">
+                                        <rect key="frame" x="126" y="0.0" width="150" height="60"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="150" id="5p7-OT-o4Q"/>
                                         </constraints>
@@ -93,31 +93,31 @@
                                     <constraint firstItem="N3b-cb-ij8" firstAttribute="leading" secondItem="A7m-dT-UIf" secondAttribute="trailing" id="yHe-v2-xQ8"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="275" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="roe-R2-3CU">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="350" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="roe-R2-3CU">
                                 <rect key="frame" x="0.0" y="119" width="393" height="733"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cardCell" rowHeight="275" id="j5a-XM-g46" customClass="CardCell" customModule="FlyEventsApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="393" height="275"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cardCell" rowHeight="350" id="j5a-XM-g46" customClass="CardCell" customModule="FlyEventsApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="350"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="j5a-XM-g46" id="c7g-3r-jWV">
-                                            <rect key="frame" x="0.0" y="0.0" width="393" height="275"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="350"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Zj-JU-jAX">
-                                                    <rect key="frame" x="28" y="16" width="337" height="243"/>
+                                                    <rect key="frame" x="28" y="16" width="337" height="318"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9RC-fq-ByM">
-                                                            <rect key="frame" x="0.0" y="0.0" width="337" height="170"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="337" height="270"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="height" constant="170" id="A9g-YT-Jtg"/>
+                                                                <constraint firstAttribute="height" constant="270" id="A9g-YT-Jtg"/>
                                                             </constraints>
                                                         </imageView>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tbi-7G-Tag">
-                                                            <rect key="frame" x="0.0" y="170" width="337" height="73"/>
+                                                            <rect key="frame" x="0.0" y="270" width="337" height="48"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pack Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QbX-m7-lO5">
-                                                                    <rect key="frame" x="16" y="24" width="77.666666666666671" height="25"/>
+                                                                    <rect key="frame" x="16" y="11.666666666666686" width="77.666666666666671" height="25"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="25" id="laS-IN-MdK"/>
                                                                     </constraints>
@@ -126,7 +126,7 @@
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price RON" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YOS-qJ-4tY">
-                                                                    <rect key="frame" x="239.66666666666671" y="24" width="81.333333333333343" height="25"/>
+                                                                    <rect key="frame" x="239.66666666666671" y="11.666666666666686" width="81.333333333333343" height="25"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="25" id="4ui-6U-FYu"/>
                                                                     </constraints>
