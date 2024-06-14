@@ -104,6 +104,10 @@
                                             <rect key="frame" x="0.0" y="0.0" width="393" height="350"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="txL-uF-lOR">
+                                                    <rect key="frame" x="20" y="11" width="353" height="328"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Zj-JU-jAX">
                                                     <rect key="frame" x="28" y="16" width="337" height="318"/>
                                                     <subviews>
@@ -158,6 +162,10 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="9Zj-JU-jAX" firstAttribute="leading" secondItem="c7g-3r-jWV" secondAttribute="leadingMargin" constant="8" id="0bA-tI-F44"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="txL-uF-lOR" secondAttribute="trailing" id="3Lm-7k-SzX"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="txL-uF-lOR" secondAttribute="bottom" id="FGc-Ro-o6u"/>
+                                                <constraint firstItem="txL-uF-lOR" firstAttribute="top" secondItem="c7g-3r-jWV" secondAttribute="topMargin" id="TvT-I4-ohp"/>
+                                                <constraint firstItem="txL-uF-lOR" firstAttribute="leading" secondItem="c7g-3r-jWV" secondAttribute="leadingMargin" id="V1v-Nf-OEd"/>
                                                 <constraint firstItem="9Zj-JU-jAX" firstAttribute="top" secondItem="c7g-3r-jWV" secondAttribute="topMargin" constant="5" id="bN0-6H-7C5"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="9Zj-JU-jAX" secondAttribute="trailing" constant="8" id="eoR-eb-pYA"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="9Zj-JU-jAX" secondAttribute="bottom" constant="5" id="lUv-iy-6In"/>
@@ -166,6 +174,7 @@
                                         <accessibility key="accessibilityConfiguration" identifier="cardCell"/>
                                         <connections>
                                             <outlet property="cardView" destination="9Zj-JU-jAX" id="aPo-x0-Rkm"/>
+                                            <outlet property="containerView" destination="txL-uF-lOR" id="hhO-3a-8hY"/>
                                             <outlet property="pictureView" destination="9RC-fq-ByM" id="KNJ-MF-ksa"/>
                                             <outlet property="priceLabel" destination="YOS-qJ-4tY" id="ruC-XV-esy"/>
                                             <outlet property="titleLabel" destination="QbX-m7-lO5" id="bdc-wh-PNA"/>

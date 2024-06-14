@@ -12,18 +12,22 @@ class BarDescriptionViewController: UIViewController {
     @IBOutlet private weak var backgroundBlur: UIVisualEffectView!
     @IBOutlet private weak var titleBackground: UIVisualEffectView!
     @IBOutlet private weak var descriptionTitle: UILabel!
-    @IBOutlet private weak var descriptionSubTitle: UILabel!
     @IBOutlet private weak var pictureView: UIImageView!
-    @IBOutlet private weak var packPriceView: UIView!
+    @IBOutlet private weak var priceTitleLabel: UILabel!
     @IBOutlet private weak var priceLabel: UILabel!
-    @IBOutlet private weak var priceBackgroundBlur: UIVisualEffectView!
     @IBOutlet private weak var packIncludesLabel: UILabel!
+    @IBOutlet private weak var priceBackgroundBlur: UIVisualEffectView!
     @IBOutlet private weak var packDescriptionLabel: UILabel!
     @IBOutlet private weak var descriptionBackgroundBlur: UIVisualEffectView!
+    @IBOutlet private weak var packDescriptionTitleLabel: UILabel!
+
+    private var viewModel = BarDescriptionViewModel()
+    var id: String = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        loadAllData()
         setupUI()
     }
 
@@ -33,18 +37,70 @@ extension BarDescriptionViewController {
 
     private func setupUI() {
         backgroundBlur.layer.cornerRadius = 20
+        backgroundBlur.clipsToBounds = true
+
         titleBackground.layer.cornerRadius = 20
-        packPriceView.layer.cornerRadius = 20
+        titleBackground.clipsToBounds = true
+
         pictureView.layer.cornerRadius = 20
-        priceBackgroundBlur.layer.cornerRadius = 20
+        pictureView.clipsToBounds = true
+
         descriptionBackgroundBlur.layer.cornerRadius = 20
-        descriptionTitle.font = .coolveticaRegular(ofSize: 25)
-        descriptionSubTitle.font = .coolveticaRegular(ofSize: 18)
-        priceLabel.font = .coolveticaRegular(ofSize: 15)
-        priceLabel.textColor = UIColor(white: 1.0, alpha: 0.5)
+        descriptionBackgroundBlur.clipsToBounds = true
+
+        descriptionTitle.font = .coolveticaRegular(ofSize: 35)
+
+        priceBackgroundBlur.layer.cornerRadius = 20
+        priceBackgroundBlur.clipsToBounds = true
+
+        priceTitleLabel.font = .coolveticaRegular(ofSize: 15)
+        priceTitleLabel.textColor = UIColor(white: 1.0, alpha: 0.5)
+
+        priceLabel.font = .coolveticaRegular(ofSize: 30)
+
         packIncludesLabel.font = .coolveticaRegular(ofSize: 15)
         packIncludesLabel.textColor = UIColor(white: 1.0, alpha: 0.5)
-        packDescriptionLabel.font = .coolveticaRegular(ofSize: 30)
+
+        packDescriptionLabel.font = .coolveticaRegular(ofSize: 15)
+
+        packDescriptionTitleLabel.font = .coolveticaRegular(ofSize: 20)
+        packDescriptionTitleLabel.text = packDescriptionTitleLabel.text?.uppercased()
+    }
+}
+
+    extension BarDescriptionViewController {
+
+        private func loadAllData() {
+            viewModel.getBarDescription(for: id) { isLoaded in
+                if isLoaded {
+                    DispatchQueue.main.async {
+                        self.updateUI()
+                    }
+                }
+            }
+        }
+
     }
 
-}
+    extension BarDescriptionViewController {
+
+        private func updateUI() {
+            descriptionTitle.text = viewModel.barDescriptionModel?.title.uppercased()
+            priceLabel.text = viewModel.barDescriptionModel?.priceWithCurrency
+            pictureView.image = viewModel.barDescriptionModel?.image
+            packDescriptionTitleLabel.text =
+            viewModel.barDescriptionModel?.packDescriptionTitle.replacingOccurrences(of: "\\n", with: "\n")
+            packDescriptionLabel.text =
+            viewModel.barDescriptionModel?.packDescription.replacingOccurrences(of: "\\n", with: "\n")
+            setBackground()
+        }
+
+        func setBackground() {
+            let backgroundImageView = UIImageView(frame: self.view.bounds)
+            backgroundImageView.image = viewModel.barDescriptionModel?.backgroundImage
+            backgroundImageView.contentMode = .scaleAspectFill
+            backgroundImageView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+            self.view.addSubview(backgroundImageView)
+            self.view.sendSubviewToBack(backgroundImageView)
+        }
+    }

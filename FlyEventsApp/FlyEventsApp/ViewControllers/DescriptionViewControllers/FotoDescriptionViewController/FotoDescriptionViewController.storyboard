@@ -16,24 +16,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Foto" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2dc-K0-0sj">
-                                <rect key="frame" x="179" y="415.66666666666669" width="35" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cSp-DR-dy0">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="2dc-K0-0sj" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="2dj-Uv-c0X"/>
-                            <constraint firstItem="2dc-K0-0sj" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="MgS-KB-5AJ"/>
+                            <constraint firstItem="cSp-DR-dy0" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="71A-rV-Rfp"/>
+                            <constraint firstItem="cSp-DR-dy0" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="Awn-hc-ryT"/>
+                            <constraint firstItem="cSp-DR-dy0" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="Lwu-dH-mmJ"/>
+                            <constraint firstAttribute="bottom" secondItem="cSp-DR-dy0" secondAttribute="bottom" id="tq2-t0-ul0"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="fotoImageView" destination="cSp-DR-dy0" id="MbO-pJ-T28"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="140" y="-23"/>
+            <point key="canvasLocation" x="139.69465648854961" y="-23.239436619718312"/>
         </scene>
     </scenes>
     <resources>

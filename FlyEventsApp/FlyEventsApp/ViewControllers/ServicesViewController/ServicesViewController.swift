@@ -115,13 +115,19 @@ extension ServicesViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch indexPath.section {
         case 0:
-            goToDjDescritpionViewController()
+            goToDjDescritpionViewController(with: indexPath)
         case 1:
-            goToBarDescriptionViewController()
+            let barDescriptionViewController = BarDescriptionViewController.instantiate()
+            barDescriptionViewController.id = viewModel.servicesSections[indexPath.section][indexPath.row].id
+            goToBarDescriptionViewController(with: indexPath)
         case 2:
-            goToFotoDescritpionViewController()
+            let fotoDescriptionViewController = FotoDescriptionViewController.instantiate()
+            fotoDescriptionViewController.id = viewModel.servicesSections[indexPath.section][indexPath.row].id
+            goToFotoDescritpionViewController(with: indexPath)
         case 3:
-            goToDecorDescritpionViewController()
+            let decorDescriptionViewController = DecorDescriptionViewController.instantiate()
+            decorDescriptionViewController.id = viewModel.servicesSections[indexPath.section][indexPath.row].id
+            goToDecorDescritpionViewController(with: indexPath)
         default:
             return
         }
@@ -129,25 +135,30 @@ extension ServicesViewController: UITableViewDelegate, UITableViewDataSource {
 
     }
 
-   private func goToDjDescritpionViewController() {
+    private func goToDjDescritpionViewController(with indexPath: IndexPath) {
         let viewController = DjDescriptionViewController.instantiate()
+        viewController.id = viewModel.servicesSections[indexPath.section][indexPath.row].id
         present(viewController, animated: true)
+
 
     }
 
-    private func goToBarDescriptionViewController() {
+    private func goToBarDescriptionViewController(with indexPath: IndexPath) {
         let viewController = BarDescriptionViewController.instantiate()
+        viewController.id = viewModel.servicesSections[indexPath.section][indexPath.row].id
         present(viewController, animated: true)
 
     }
 
-    private func goToFotoDescritpionViewController() {
+    private func goToFotoDescritpionViewController(with indexPath: IndexPath) {
         let viewController = FotoDescriptionViewController.instantiate()
+        viewController.id = viewModel.servicesSections[indexPath.section][indexPath.row].id
         present(viewController, animated: true)
     }
 
-    private func goToDecorDescritpionViewController() {
+    private func goToDecorDescritpionViewController(with indexPath: IndexPath) {
         let viewController = DecorDescriptionViewController.instantiate()
+        viewController.id = viewModel.servicesSections[indexPath.section][indexPath.row].id
         present(viewController, animated: true)
     }
 

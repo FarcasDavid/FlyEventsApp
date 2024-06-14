@@ -34,4 +34,5 @@ struct ServiceOptions: Codable {
         self.imageURL = try container.decode(String.self, forKey: .imageURL)
         self.id = try container.decode(String.self, forKey: .id)
     }
+
 }

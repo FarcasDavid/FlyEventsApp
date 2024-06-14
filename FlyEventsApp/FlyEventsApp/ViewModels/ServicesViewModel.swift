@@ -45,11 +45,13 @@ class ServicesViewModel {
             if let error = error {
                 print("Error fetching image: \(error)")
                 completion(nil)
-            } else {if let data = data, let image = UIImage(data: data) {
-                completion(image)
             } else {
-                completion(nil)
-            }}
+                if let data = data, let image = UIImage(data: data) {
+                    completion(image)
+                } else {
+                    completion(nil)
+                }
+            }
         }
     }
 

@@ -76,7 +76,7 @@ extension ChooseEventViewController {
     }
 
     @objc private func didTapLogout() {
-        // TODO: Create function for logic here in viewModel
+        // TODO: move to viewModel
         AuthService.shared.signOut { [weak self] error in
             guard let self = self else { return }
 

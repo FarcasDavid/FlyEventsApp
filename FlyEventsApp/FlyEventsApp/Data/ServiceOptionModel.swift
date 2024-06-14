@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 
 struct ServiceOptionModel {
+
     let title: String
     let price: Int
     let event: String
@@ -23,4 +24,5 @@ struct ServiceOptionModel {
             return "\(price) RON"
         }
     }
+
 }
