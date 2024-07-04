@@ -120,6 +120,22 @@
                                     <constraint firstItem="nCF-Kd-RQH" firstAttribute="leading" secondItem="Ki0-np-hSA" secondAttribute="leading" id="yvl-wg-HvG"/>
                                 </constraints>
                             </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xPn-lQ-Y26">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="vH9-DC-9n9">
+                                        <rect key="frame" x="178" y="407.66666666666669" width="37" height="37"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="color" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="vH9-DC-9n9" firstAttribute="centerX" secondItem="xPn-lQ-Y26" secondAttribute="centerX" id="7zT-Sz-liI"/>
+                                    <constraint firstItem="vH9-DC-9n9" firstAttribute="centerY" secondItem="xPn-lQ-Y26" secondAttribute="centerY" id="gGR-Db-z8S"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -127,14 +143,20 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Ki0-np-hSA" secondAttribute="trailing" constant="8" id="8sn-HO-1Ve"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="Ki0-np-hSA" secondAttribute="bottom" constant="32" id="GWz-Nq-MhV"/>
                             <constraint firstItem="Ki0-np-hSA" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="8" id="KXl-zL-bRF"/>
+                            <constraint firstAttribute="bottom" secondItem="xPn-lQ-Y26" secondAttribute="bottom" id="Vjb-yF-8kE"/>
+                            <constraint firstItem="xPn-lQ-Y26" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="a2p-Pk-mln"/>
+                            <constraint firstItem="xPn-lQ-Y26" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="bn9-y0-pHk"/>
                             <constraint firstItem="Ki0-np-hSA" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="32" id="eiQ-Px-nhg"/>
+                            <constraint firstItem="xPn-lQ-Y26" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="fdr-Ip-HdG"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="vH9-DC-9n9" id="qHD-fC-JSQ"/>
                         <outlet property="leftBottomImageView" destination="n1M-gr-qNs" id="WDC-zr-M23"/>
                         <outlet property="leftBottomView" destination="aJN-zI-9Bl" id="3ur-gB-fbU"/>
                         <outlet property="leftTopImageView" destination="W35-5l-A0z" id="7ge-87-qXp"/>
                         <outlet property="leftTopView" destination="GX1-sP-c1e" id="oC1-Vq-0vy"/>
+                        <outlet property="loadingIndicatorView" destination="xPn-lQ-Y26" id="ctt-OW-GOd"/>
                         <outlet property="lowerStackView" destination="nCF-Kd-RQH" id="4Xr-ge-bcq"/>
                         <outlet property="middleImageView" destination="Jbt-yw-o5v" id="wIj-Gj-s3s"/>
                         <outlet property="middleStackView" destination="L7o-Sk-iD7" id="KAW-yh-ftV"/>

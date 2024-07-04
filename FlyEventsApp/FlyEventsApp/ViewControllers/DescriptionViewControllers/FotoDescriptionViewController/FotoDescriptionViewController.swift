@@ -10,6 +10,9 @@ import UIKit
 
 class FotoDescriptionViewController: UIViewController {
 
+    @IBOutlet private weak var loadingIndicatorView: UIView!
+    @IBOutlet private weak var activityIndicator: UIActivityIndicatorView!
+
     @IBOutlet private weak var fotoImageView: UIImageView!
 
     private let viewModel = FotoDescriptionViewModel()
@@ -20,7 +23,6 @@ class FotoDescriptionViewController: UIViewController {
         super.viewDidLoad()
 
         loadAllData()
-        // setupUI()
     }
 
 }
@@ -28,10 +30,14 @@ class FotoDescriptionViewController: UIViewController {
 extension FotoDescriptionViewController {
 
     private func loadAllData() {
+        loadingIndicatorView.isHidden = false
+        activityIndicator.startAnimating()
         viewModel.getFotoDescription(for: id) { isLoaded in
             if isLoaded {
                 DispatchQueue.main.async {
                     self.updateUI()
+                    self.loadingIndicatorView.isHidden = true
+                    self.activityIndicator.stopAnimating()
                 }
             }
         }

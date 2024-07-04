@@ -10,6 +10,8 @@ import UIKit
 
 class DecorDescriptionViewController: UIViewController {
 
+    @IBOutlet private weak var loadingIndicatorView: UIView!
+    @IBOutlet private weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet private weak var upperStackView: UIStackView!
     @IBOutlet private weak var middleStackView: UIStackView!
     @IBOutlet private weak var lowerStackView: UIStackView!
@@ -74,10 +76,14 @@ extension DecorDescriptionViewController {
 extension DecorDescriptionViewController {
 
     private func loadAllData() {
+        loadingIndicatorView.isHidden = false
+        activityIndicator.startAnimating()
         viewModel.getDecorDescription(for: id) { isLoaded in
             if isLoaded {
                 DispatchQueue.main.async {
                     self.updateUI()
+                    self.loadingIndicatorView.isHidden = true
+                    self.activityIndicator.stopAnimating()
                 }
             }
         }

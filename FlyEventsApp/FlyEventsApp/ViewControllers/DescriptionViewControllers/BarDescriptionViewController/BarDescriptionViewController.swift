@@ -9,6 +9,8 @@ import UIKit
 
 class BarDescriptionViewController: UIViewController {
 
+    @IBOutlet private weak var loadingIndicatorView: UIView!
+    @IBOutlet private weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet private weak var backgroundBlur: UIVisualEffectView!
     @IBOutlet private weak var titleBackground: UIVisualEffectView!
     @IBOutlet private weak var descriptionTitle: UILabel!
@@ -71,10 +73,14 @@ extension BarDescriptionViewController {
     extension BarDescriptionViewController {
 
         private func loadAllData() {
+            loadingIndicatorView.isHidden = false
+            activityIndicator.startAnimating()
             viewModel.getBarDescription(for: id) { isLoaded in
                 if isLoaded {
                     DispatchQueue.main.async {
                         self.updateUI()
+                        self.loadingIndicatorView.isHidden = true
+                        self.activityIndicator.stopAnimating()
                     }
                 }
             }

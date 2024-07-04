@@ -167,6 +167,22 @@
                                 </view>
                                 <blurEffect style="light"/>
                             </visualEffectView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DnH-fE-hed">
+                                <rect key="frame" x="0.0" y="59" width="393" height="793"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="isJ-M9-DAd">
+                                        <rect key="frame" x="178" y="378" width="37" height="37"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="color" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="isJ-M9-DAd" firstAttribute="centerY" secondItem="DnH-fE-hed" secondAttribute="centerY" id="OVT-W4-P7F"/>
+                                    <constraint firstItem="isJ-M9-DAd" firstAttribute="centerX" secondItem="DnH-fE-hed" secondAttribute="centerX" id="oJU-DT-RpJ"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -178,24 +194,30 @@
                             <constraint firstItem="Cof-jA-fpU" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="48" id="EN4-og-4Bl"/>
                             <constraint firstItem="Uef-PF-3V0" firstAttribute="leading" secondItem="Vdc-Tg-jqG" secondAttribute="leading" constant="16" id="EqS-oT-wii"/>
                             <constraint firstItem="mLB-0Y-wMF" firstAttribute="leading" secondItem="Vdc-Tg-jqG" secondAttribute="leading" constant="24" id="IEN-3c-3Gq"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="DnH-fE-hed" secondAttribute="trailing" id="O7K-QC-Ncx"/>
                             <constraint firstItem="f9W-cg-dVp" firstAttribute="top" secondItem="Uef-PF-3V0" secondAttribute="bottom" constant="16" id="Q1V-OK-kUc"/>
+                            <constraint firstItem="DnH-fE-hed" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="SFk-IW-21c"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="mLB-0Y-wMF" secondAttribute="trailing" constant="24" id="Smj-Ba-Cub"/>
                             <constraint firstItem="mLB-0Y-wMF" firstAttribute="top" secondItem="t1t-5Y-O7u" secondAttribute="bottom" constant="8" id="Wb3-rg-TTg"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="Vdc-Tg-jqG" secondAttribute="bottom" constant="4" id="X9R-AJ-XfN"/>
                             <constraint firstItem="t1t-5Y-O7u" firstAttribute="top" secondItem="f9W-cg-dVp" secondAttribute="bottom" constant="8" id="dJD-86-XPh"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Cof-jA-fpU" secondAttribute="trailing" constant="16" id="l0t-iG-4ZH"/>
+                            <constraint firstAttribute="bottom" secondItem="DnH-fE-hed" secondAttribute="bottom" id="lsN-Hl-ZGQ"/>
                             <constraint firstItem="f9W-cg-dVp" firstAttribute="leading" secondItem="Vdc-Tg-jqG" secondAttribute="leading" constant="16" id="mTz-ib-goX"/>
                             <constraint firstItem="Vdc-Tg-jqG" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="4" id="mbE-2o-Jxv"/>
                             <constraint firstItem="Vdc-Tg-jqG" firstAttribute="trailing" secondItem="f9W-cg-dVp" secondAttribute="trailing" constant="16" id="qZ4-K9-xHx"/>
                             <constraint firstItem="Vdc-Tg-jqG" firstAttribute="bottom" secondItem="mLB-0Y-wMF" secondAttribute="bottom" constant="40" id="vM7-cX-2L2"/>
                             <constraint firstItem="Vdc-Tg-jqG" firstAttribute="trailing" secondItem="Uef-PF-3V0" secondAttribute="trailing" constant="16" id="wz7-ti-Pdv"/>
                             <constraint firstItem="Uef-PF-3V0" firstAttribute="top" secondItem="Cof-jA-fpU" secondAttribute="bottom" constant="8" id="yT6-I3-MUA"/>
+                            <constraint firstItem="DnH-fE-hed" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="zxl-Mr-9FU"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="isJ-M9-DAd" id="znY-7Z-rWh"/>
                         <outlet property="backgroundBlur" destination="Vdc-Tg-jqG" id="DbP-YO-cnt"/>
                         <outlet property="descriptionBackgroundBlur" destination="mLB-0Y-wMF" id="1eC-bv-ebg"/>
                         <outlet property="descriptionTitle" destination="bWV-K9-jA4" id="fyf-eb-Edk"/>
+                        <outlet property="loadingIndicatorView" destination="DnH-fE-hed" id="uMs-gQ-6iE"/>
                         <outlet property="numberOfPeopleBackgroundBlur" destination="LWy-eV-udl" id="Yr5-bk-gnw"/>
                         <outlet property="numberOfPeopleLabel" destination="X1I-ev-blf" id="uQE-3G-BTV"/>
                         <outlet property="numberOfPeopleTitleLabel" destination="f1V-JS-sT9" id="RpW-Zl-XYZ"/>

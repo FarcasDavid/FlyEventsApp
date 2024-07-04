@@ -19,6 +19,22 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cSp-DR-dy0">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                             </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="289-uv-ujB">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="zEZ-b4-kCZ">
+                                        <rect key="frame" x="178" y="407.66666666666669" width="37" height="37"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="color" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="zEZ-b4-kCZ" firstAttribute="centerX" secondItem="289-uv-ujB" secondAttribute="centerX" id="5Cq-KK-UX2"/>
+                                    <constraint firstItem="zEZ-b4-kCZ" firstAttribute="centerY" secondItem="289-uv-ujB" secondAttribute="centerY" id="tYF-8G-VqU"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -26,11 +42,17 @@
                             <constraint firstItem="cSp-DR-dy0" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="71A-rV-Rfp"/>
                             <constraint firstItem="cSp-DR-dy0" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="Awn-hc-ryT"/>
                             <constraint firstItem="cSp-DR-dy0" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="Lwu-dH-mmJ"/>
+                            <constraint firstItem="289-uv-ujB" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="hCi-aU-Lr0"/>
+                            <constraint firstItem="289-uv-ujB" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="hrB-C0-8rJ"/>
+                            <constraint firstAttribute="bottom" secondItem="289-uv-ujB" secondAttribute="bottom" id="sVz-fA-QPM"/>
                             <constraint firstAttribute="bottom" secondItem="cSp-DR-dy0" secondAttribute="bottom" id="tq2-t0-ul0"/>
+                            <constraint firstItem="289-uv-ujB" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="xEv-oI-ERD"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="zEZ-b4-kCZ" id="sh4-lw-2qv"/>
                         <outlet property="fotoImageView" destination="cSp-DR-dy0" id="MbO-pJ-T28"/>
+                        <outlet property="loadingIndicatorView" destination="289-uv-ujB" id="bKk-fm-JNq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

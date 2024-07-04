@@ -111,7 +111,7 @@
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e8E-nv-4bk">
                                 <rect key="frame" x="28" y="604.33333333333337" width="337" height="169.66666666666663"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="1eX-Pc-gfi">
-                                    <rect key="frame" x="0.0" y="0.0" width="337" height="170"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="337" height="169.66666666666663"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="We7-QT-BaX">
@@ -138,12 +138,31 @@
                                 </view>
                                 <blurEffect style="dark"/>
                             </visualEffectView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bTw-dr-anC">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="54K-VT-czx">
+                                        <rect key="frame" x="178" y="407.66666666666669" width="37" height="37"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="color" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="54K-VT-czx" firstAttribute="centerY" secondItem="bTw-dr-anC" secondAttribute="centerY" id="87M-vC-F09"/>
+                                    <constraint firstItem="54K-VT-czx" firstAttribute="centerX" secondItem="bTw-dr-anC" secondAttribute="centerX" id="Uau-cj-e9l"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="4hh-dE-Qf1"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="bTw-dr-anC" firstAttribute="top" secondItem="P4L-0Y-EFh" secondAttribute="top" id="4hR-Qa-C70"/>
+                            <constraint firstAttribute="bottom" secondItem="bTw-dr-anC" secondAttribute="bottom" id="7xo-DF-bkO"/>
                             <constraint firstItem="xBp-AG-RYf" firstAttribute="leading" secondItem="4hh-dE-Qf1" secondAttribute="leading" constant="16" id="9gw-kM-Rx4"/>
                             <constraint firstItem="4hh-dE-Qf1" firstAttribute="trailing" secondItem="cj4-xV-UzQ" secondAttribute="trailing" constant="4" id="AMC-fr-ApO"/>
+                            <constraint firstItem="bTw-dr-anC" firstAttribute="trailing" secondItem="4hh-dE-Qf1" secondAttribute="trailing" id="Fez-iJ-VxD"/>
                             <constraint firstItem="1JP-1U-Wai" firstAttribute="leading" secondItem="cj4-xV-UzQ" secondAttribute="leading" constant="24" id="H7W-Q2-ISo"/>
                             <constraint firstItem="4hh-dE-Qf1" firstAttribute="trailing" secondItem="xBp-AG-RYf" secondAttribute="trailing" constant="16" id="I6B-9M-5tY"/>
                             <constraint firstItem="cj4-xV-UzQ" firstAttribute="trailing" secondItem="e8E-nv-4bk" secondAttribute="trailing" constant="24" id="Ig2-CZ-EVd"/>
@@ -160,13 +179,16 @@
                             <constraint firstItem="cj4-xV-UzQ" firstAttribute="bottom" secondItem="e8E-nv-4bk" secondAttribute="bottom" constant="40" id="jFZ-6S-brI"/>
                             <constraint firstItem="e8E-nv-4bk" firstAttribute="leading" secondItem="cj4-xV-UzQ" secondAttribute="leading" constant="24" id="qcM-0l-opu"/>
                             <constraint firstItem="xBp-AG-RYf" firstAttribute="top" secondItem="4hh-dE-Qf1" secondAttribute="top" constant="48" id="wJ2-aG-lWP"/>
+                            <constraint firstItem="bTw-dr-anC" firstAttribute="leading" secondItem="4hh-dE-Qf1" secondAttribute="leading" id="y7c-2F-v6P"/>
                             <constraint firstItem="e8E-nv-4bk" firstAttribute="top" secondItem="1JP-1U-Wai" secondAttribute="bottom" constant="8" id="z5E-LP-jvV"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="54K-VT-czx" id="M0B-51-cpl"/>
                         <outlet property="backgroundBlur" destination="cj4-xV-UzQ" id="rdV-cO-ARH"/>
                         <outlet property="descriptionBackgroundBlur" destination="e8E-nv-4bk" id="8X6-sS-wwJ"/>
                         <outlet property="descriptionTitle" destination="QXI-Zf-cpS" id="yv3-S4-4Vq"/>
+                        <outlet property="loadingIndicatorView" destination="bTw-dr-anC" id="7Oz-dF-5GL"/>
                         <outlet property="packDescriptionLabel" destination="We7-QT-BaX" id="e3r-Xf-hxO"/>
                         <outlet property="packDescriptionTitleLabel" destination="Bd6-GL-gKQ" id="Gi7-Vp-Q4q"/>
                         <outlet property="packIncludesLabel" destination="1JP-1U-Wai" id="2Tb-Sm-OCz"/>

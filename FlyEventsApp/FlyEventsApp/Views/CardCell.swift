@@ -9,7 +9,7 @@ import UIKit
 
 class CardCell: UITableViewCell {
 
-    @IBOutlet private weak var containerView: UIView!
+    @IBOutlet private weak var containerBlurView: UIVisualEffectView!
     @IBOutlet private weak var cardView: UIView!
     @IBOutlet private weak var pictureView: UIImageView!
     @IBOutlet private weak var titleLabel: UILabel!
@@ -18,27 +18,40 @@ class CardCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
 
+        setupBackgrounds()
         setupView()
     }
 
     // TODO: Vezi cum rotunjesti containerView fara sa pierzi umbra
 
     private func setupView() {
-        containerView.layer.shadowColor = UIColor.gray.cgColor
-        containerView.layer.shadowOpacity = 0.8 // Shadow opacity
-        containerView.layer.shadowOffset = CGSize(width: 6.0, height: 6.0) // Shadow offset
-        containerView.layer.shadowRadius = 6.0 // Shadow radius
-        containerView.layer.masksToBounds = false
 
         cardView.layer.cornerRadius = 20.0
         cardView.layer.masksToBounds = true // Ensure the card view clips its bounds
+        containerBlurView.layer.cornerRadius = 20
+        containerBlurView.layer.masksToBounds = true
+        pictureView.layer.cornerRadius = 20
+        pictureView.layer.masksToBounds = true
+    }
+
+    private func setupBackgrounds() {
+        // Set the backgroundView to clear
+        let clearView = UIView()
+        clearView.backgroundColor = .clear
+        self.backgroundView = clearView
+
+        // Set the contentView background to clear
+        self.contentView.backgroundColor = .clear
+
+        // Optionally, set the cell's background color to clear as well
+        self.backgroundColor = .clear
     }
 
     func setupCell(with option: ServiceOptionModel, at indexPath: IndexPath) {
         titleLabel.text = option.title
-        titleLabel.font = .coolveticaFont(ofSize: 18, weight: .regular)
+        titleLabel.font = .coolveticaFont(ofSize: 20, weight: .regular)
         priceLabel.text = option.priceWithCurrency
-        priceLabel.font = .coolveticaFont(ofSize: 18, weight: .regular)
+        priceLabel.font = .coolveticaFont(ofSize: 20, weight: .regular)
         pictureView.image = option.image
     }
 }

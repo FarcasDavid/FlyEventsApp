@@ -10,11 +10,20 @@ import UIKit
 class ChooseEventViewController: UIViewController {
 
 
-    @IBOutlet private weak var chooseEventView: UIVisualEffectView!
     @IBOutlet private weak var weddingImageView: UIImageView!
     @IBOutlet private weak var baptismImageView: UIImageView!
     @IBOutlet private weak var birthdayImageView: UIImageView!
     @IBOutlet private weak var corporateImageView: UIImageView!
+    @IBOutlet private weak var weddingView: UIVisualEffectView!
+    @IBOutlet private weak var baptismView: UIVisualEffectView!
+    @IBOutlet private weak var birthdayView: UIVisualEffectView!
+    @IBOutlet private weak var corporateView: UIVisualEffectView!
+    @IBOutlet private weak var titleLabel: UILabel!
+
+    @IBOutlet private weak var weddingLabel: UILabel!
+    @IBOutlet private weak var baptismLabel: UILabel!
+    @IBOutlet private weak var birthdayLabel: UILabel!
+    @IBOutlet private weak var corporateLabel: UILabel!
 
     private let logoutButton = CustomButton(
         title: "Logout",
@@ -34,20 +43,31 @@ class ChooseEventViewController: UIViewController {
 
     // MARK: - UI Setup
     private func setupUI() {
-        chooseEventView.layer.cornerRadius = 30
-        chooseEventView.clipsToBounds = true
-
+        weddingView.layer.cornerRadius = 15
+        weddingView.clipsToBounds = true
         weddingImageView.layer.cornerRadius = 15
         weddingImageView.clipsToBounds = true
 
+        baptismView.layer.cornerRadius = 15
+        baptismView.clipsToBounds = true
         baptismImageView.layer.cornerRadius = 15
         baptismImageView.clipsToBounds = true
 
+        birthdayView.layer.cornerRadius = 15
+        birthdayView.clipsToBounds = true
         birthdayImageView.layer.cornerRadius = 15
         birthdayImageView.clipsToBounds = true
 
+        corporateView.layer.cornerRadius = 15
+        corporateView.clipsToBounds = true
         corporateImageView.layer.cornerRadius = 15
         corporateImageView.clipsToBounds = true
+
+        titleLabel.font = .coolveticaFont(ofSize: 30, weight: .regular)
+        weddingLabel.font = .coolveticaFont(ofSize: 19, weight: .light)
+        baptismLabel.font = .coolveticaFont(ofSize: 19, weight: .light)
+        birthdayLabel.font = .coolveticaFont(ofSize: 19, weight: .light)
+        corporateLabel.font = .coolveticaFont(ofSize: 19, weight: .light)
 
 
         logoutButton.addTarget(self, action: #selector(didTapLogout), for: .touchUpInside)
@@ -68,6 +88,7 @@ class ChooseEventViewController: UIViewController {
 extension ChooseEventViewController {
 
     @IBAction private func didTapWedding(_ sender: UITapGestureRecognizer) {
+        print("did tap wedding")
         goToServicesViewController(for: .wedding)
     }
     @IBAction private func didTapBaptism(_ sender: UITapGestureRecognizer) {
