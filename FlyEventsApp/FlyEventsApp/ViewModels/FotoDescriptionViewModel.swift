@@ -66,8 +66,8 @@ class FotoDescriptionViewModel {
                     image: image
                 )
                 completion(true)
-            }
         }
+    }
 
 
     func getFotoDescription(for id: String, completion: @escaping(Bool) -> Void) {

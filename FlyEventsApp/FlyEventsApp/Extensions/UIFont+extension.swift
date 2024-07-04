@@ -8,10 +8,28 @@
 import Foundation
 import UIKit
 
+enum FontWeight {
+    case bold
+    case regular
+    case light
+    case extraLight
+}
+
 extension UIFont {
 
-    class func coolveticaRegular(ofSize fontSize: CGFloat) -> UIFont {
-        customFont(name: "CoolveticaRg-Regular", size: fontSize)
+    class func coolveticaFont(ofSize fontSize: CGFloat, weight: FontWeight) -> UIFont {
+        switch weight {
+        case .bold:
+            customFont(name: "CoolveticaRg-Bold", size: fontSize)
+        case .regular:
+            customFont(name: "CoolveticaRg-Regular", size: fontSize)
+        case .light:
+            customFont(name: "CoolveticaLt-Regular", size: fontSize)
+        case .extraLight:
+            customFont(name: "CoolveticaEl-Regular", size: fontSize)
+
+        }
+
     }
 
     private class func customFont(name: String, size: CGFloat) -> UIFont {

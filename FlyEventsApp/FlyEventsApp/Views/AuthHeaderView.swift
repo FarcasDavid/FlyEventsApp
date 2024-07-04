@@ -12,17 +12,17 @@ class AuthHeaderView: UIView {
 
     private let titleLabel: UILabel = {
         let label = UILabel()
-        label.textColor = .label
+        label.textColor = .white
         label.textAlignment = .center
-        label.font = .systemFont(ofSize: 26, weight: .bold)
+        label.font = .coolveticaFont(ofSize: 26, weight: .bold)
         return label
     }()
 
     private let subTitleLabel: UILabel = {
         let label = UILabel()
-        label.textColor = .secondaryLabel
+        label.textColor = UIColor(red: 0.75, green: 0.75, blue: 0.75, alpha: 1.0)
         label.textAlignment = .center
-        label.font = .systemFont(ofSize: 18, weight: .regular)
+        label.font = .coolveticaFont(ofSize: 18, weight: .regular)
         return label
     }()
 

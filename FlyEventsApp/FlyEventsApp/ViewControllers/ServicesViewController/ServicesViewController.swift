@@ -27,7 +27,6 @@ class ServicesViewController: UIViewController {
         setupUI()
         loadAllData()
     }
-
 }
 
 extension ServicesViewController {

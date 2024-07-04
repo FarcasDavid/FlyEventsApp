@@ -32,11 +32,16 @@ class ForgotPasswordViewController: UIViewController {
 
     // MARK: - UI Setup
     private func setupUI() {
-        self.view.backgroundColor = .systemBackground
-
+        setBackButton()
+        setBackground()
         self.view.addSubview(headerView)
         self.view.addSubview(emailField)
         self.view.addSubview(resetPasswordButton)
+
+        let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
+
+        emailField.delegate = self
 
 
         headerView.translatesAutoresizingMaskIntoConstraints = false
@@ -63,6 +68,13 @@ class ForgotPasswordViewController: UIViewController {
     }
 
     // MARK: - Selectors
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
+
+    @objc private func didTapBack() {
+        navigationController?.popViewController(animated: true)
+    }
     @objc private func didTapForgotPassword() {
         let email = self.emailField.text ?? ""
 
@@ -80,5 +92,42 @@ class ForgotPasswordViewController: UIViewController {
 
             AlertManager.showPasswordResetSent(on: self)
         }
+    }
+}
+
+extension ForgotPasswordViewController {
+
+    private func setBackButton() {
+        let backButtonImage = UIImage(named: "CustomBackNavIcon")?.withRenderingMode(.alwaysOriginal)
+        let backButton = UIBarButtonItem(
+            image: backButtonImage,
+            style: .plain,
+            target: self,
+            action: #selector(didTapBack)
+        )
+        navigationItem.leftBarButtonItem = backButton
+    }
+
+
+    func setBackground() {
+        let backgroundImageView = UIImageView(frame: self.view.bounds)
+        backgroundImageView.image = UIImage(named: "mainBackground")
+        backgroundImageView.contentMode = .scaleAspectFill
+        backgroundImageView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        self.view.addSubview(backgroundImageView)
+
+        let blurEffect = UIBlurEffect(style: .dark)
+        let blurredEffectView = UIVisualEffectView(effect: blurEffect)
+        blurredEffectView.frame = backgroundImageView.bounds
+        blurredEffectView.alpha = 0.7
+        view.addSubview(blurredEffectView)
+    }
+
+}
+
+extension ForgotPasswordViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
 }

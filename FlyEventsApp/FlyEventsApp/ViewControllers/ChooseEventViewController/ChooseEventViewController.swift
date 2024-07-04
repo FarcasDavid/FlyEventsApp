@@ -16,6 +16,13 @@ class ChooseEventViewController: UIViewController {
     @IBOutlet private weak var birthdayImageView: UIImageView!
     @IBOutlet private weak var corporateImageView: UIImageView!
 
+    private let logoutButton = CustomButton(
+        title: "Logout",
+        hasBackground: true,
+        fontSize: .med,
+        type: .logout
+        )
+
     // MARK: - Lifecycle
 
     override func viewDidLoad() {
@@ -42,12 +49,18 @@ class ChooseEventViewController: UIViewController {
         corporateImageView.layer.cornerRadius = 15
         corporateImageView.clipsToBounds = true
 
+
+        logoutButton.addTarget(self, action: #selector(didTapLogout), for: .touchUpInside)
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(
-            title: "Logout",
-            style: .plain,
-            target: self,
-            action: #selector(didTapLogout)
+            customView: logoutButton
         )
+
+        logoutButton.translatesAutoresizingMaskIntoConstraints = false
+
+        NSLayoutConstraint.activate([
+
+        ])
+
     }
 
 }
@@ -55,28 +68,20 @@ class ChooseEventViewController: UIViewController {
 extension ChooseEventViewController {
 
     @IBAction private func didTapWedding(_ sender: UITapGestureRecognizer) {
-        print("did tap wedding")
-//        viewModel.getServices(from: "wedding")
         goToServicesViewController(for: .wedding)
     }
     @IBAction private func didTapBaptism(_ sender: UITapGestureRecognizer) {
-        print("did tap baptism")
-//        viewModel.getServices(from: "botez")
         goToServicesViewController(for: .baptising)
     }
     @IBAction private func didTapBirthday(_ sender: UITapGestureRecognizer) {
-        print("did tap majorat")
-//        viewModel.getServices(from: "majorat")
         goToServicesViewController(for: .majorat)
     }
     @IBAction private func didTapCorporate(_ sender: UITapGestureRecognizer) {
-        print("did tap corporate")
-//                viewModel.getServices(from: "corporate")
         goToServicesViewController(for: .corporate)
     }
 
+// MARK: - Selectors
     @objc private func didTapLogout() {
-        // TODO: move to viewModel
         AuthService.shared.signOut { [weak self] error in
             guard let self = self else { return }
 

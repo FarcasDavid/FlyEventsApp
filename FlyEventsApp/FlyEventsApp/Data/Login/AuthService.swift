@@ -18,7 +18,7 @@ public class AuthService {
 
     /// A method to register the user
     /// - Parameters:
-    ///   - userRequest: The users information (email, password, username)
+    ///   - userRequest: The users information (email, password, phone number, full name)
     ///   - completion: A completion with two values...
     ///   - Bool: wasRegistered - Determines if the user was registered and saved in the database correctly
     ///   - Error?: An optional error if firebase provides once

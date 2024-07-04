@@ -58,30 +58,30 @@ extension DjDescriptionViewController {
         descriptionBackgroundBlur.layer.cornerRadius = 20
         descriptionBackgroundBlur.clipsToBounds = true
 
-        descriptionTitle.font = .coolveticaRegular(ofSize: 35)
+        descriptionTitle.font = .coolveticaFont(ofSize: 35, weight: .regular)
 
         packPriceView.backgroundColor = .clear
         priceBackgroundBlur.layer.cornerRadius = 20
         priceBackgroundBlur.clipsToBounds = true
 
-        priceTitleLabel.font = .coolveticaRegular(ofSize: 15)
+        priceTitleLabel.font = .coolveticaFont(ofSize: 15, weight: .regular)
         priceTitleLabel.textColor = UIColor(white: 1.0, alpha: 0.5)
 
-        priceLabel.font = .coolveticaRegular(ofSize: 30)
+        priceLabel.font = .coolveticaFont(ofSize: 30, weight: .regular)
 
         numberOfPeopleView.backgroundColor = .clear
         numberOfPeopleBackgroundBlur.layer.cornerRadius = 20
         numberOfPeopleBackgroundBlur.clipsToBounds = true
 
-        numberOfPeopleTitleLabel.font = .coolveticaRegular(ofSize: 15)
+        numberOfPeopleTitleLabel.font = .coolveticaFont(ofSize: 15, weight: .regular)
         numberOfPeopleTitleLabel.textColor = UIColor(white: 1.0, alpha: 0.5)
 
-        numberOfPeopleLabel.font = .coolveticaRegular(ofSize: 30)
+        numberOfPeopleLabel.font = .coolveticaFont(ofSize: 30, weight: .regular)
 
-        packIncludesLabel.font = .coolveticaRegular(ofSize: 15)
+        packIncludesLabel.font = .coolveticaFont(ofSize: 15, weight: .regular)
         packIncludesLabel.textColor = UIColor(white: 1.0, alpha: 0.5)
 
-        packDescriptionLabel.font = .coolveticaRegular(ofSize: 30)
+        packDescriptionLabel.font = .coolveticaFont(ofSize: 30, weight: .regular)
         packDescriptionLabel.adjustsFontSizeToFitWidth = true
         packDescriptionLabel.minimumScaleFactor = 0.5
     }

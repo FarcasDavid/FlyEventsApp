@@ -17,8 +17,10 @@ class RegisterViewController: UIViewController {
     private let phoneNumberField = CustomTextField(fieldType: .phoneNumber)
     private let passwordField = CustomTextField(fieldType: .password)
 
-    private let signUpButton = CustomButton(title: "Sign Up", hasBackground: true, fontSize: .big)
+    private let signUpButton = CustomButton(title: "Sign Up", hasBackground: true, fontSize: .big, type: .login)
     private let signInButton = CustomButton(title: "Already have an account? Sign In.", fontSize: .med)
+
+    private let scrollView = UIScrollView()
 
     private let termsTextView: UITextView = {
 
@@ -38,11 +40,15 @@ class RegisterViewController: UIViewController {
             value: "privacy://privacyPolicy",
             range: (attributedString.string as NSString).range(of: "Privacy Policy")
         )
+
+        let font = UIFont.coolveticaFont(ofSize: 12, weight: .regular)
+        attributedString.addAttribute(.font, value: font, range: NSRange(location: 0, length: attributedString.length))
+
         let textview = UITextView()
         textview.linkTextAttributes = [.foregroundColor: UIColor.systemBlue]
         textview.backgroundColor = .clear
         textview.attributedText = attributedString
-        textview.textColor = .label
+        textview.textColor = .white
         textview.isSelectable = true
         textview.isEditable = false
         textview.delaysContentTouches = false
@@ -56,30 +62,37 @@ class RegisterViewController: UIViewController {
         super.viewDidLoad()
 
         self.setupUI()
-        self.termsTextView.delegate = self
-        self.signUpButton.addTarget(self, action: #selector(didTapSignUp), for: .touchUpInside)
-        self.signInButton.addTarget(self, action: #selector(didTapSignIn), for: .touchUpInside)
-    }
-
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-
-        self.navigationController?.navigationBar.isHidden = true
     }
 
     private func setupUI() {
-        self.view.backgroundColor = .systemBackground
 
-        self.view.addSubview(headerView)
-        self.view.addSubview(fullnameField)
-        self.view.addSubview(emailField)
-        self.view.addSubview(phoneNumberField)
-        self.view.addSubview(passwordField)
-        self.view.addSubview(signUpButton)
-        self.view.addSubview(termsTextView)
-        self.view.addSubview(signInButton)
+        self.termsTextView.delegate = self
+        self.signUpButton.addTarget(self, action: #selector(didTapSignUp), for: .touchUpInside)
+        self.signInButton.addTarget(self, action: #selector(didTapSignIn), for: .touchUpInside)
+
+        let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
+
+        fullnameField.delegate = self
+        emailField.delegate = self
+        phoneNumberField.delegate = self
+        passwordField.delegate = self
 
 
+        setBackButton()
+        setBackground()
+
+        self.view.addSubview(scrollView)
+        scrollView.addSubview(headerView)
+        scrollView.addSubview(fullnameField)
+        scrollView.addSubview(emailField)
+        scrollView.addSubview(phoneNumberField)
+        scrollView.addSubview(passwordField)
+        scrollView.addSubview(signUpButton)
+        scrollView.addSubview(termsTextView)
+        scrollView.addSubview(signInButton)
+
+        self.scrollView.translatesAutoresizingMaskIntoConstraints = false
         self.headerView.translatesAutoresizingMaskIntoConstraints = false
         self.fullnameField.translatesAutoresizingMaskIntoConstraints = false
         self.emailField.translatesAutoresizingMaskIntoConstraints = false
@@ -90,10 +103,15 @@ class RegisterViewController: UIViewController {
         self.signInButton.translatesAutoresizingMaskIntoConstraints = false
 
         NSLayoutConstraint.activate([
-            self.headerView.topAnchor.constraint(equalTo: self.view.layoutMarginsGuide.topAnchor),
-            self.headerView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
-            self.headerView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor),
-            self.headerView.heightAnchor.constraint(equalToConstant: 222),
+            scrollView.topAnchor.constraint(equalTo: self.view.topAnchor),
+            scrollView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
+            scrollView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor),
+            scrollView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor),
+
+            headerView.topAnchor.constraint(equalTo: scrollView.topAnchor),
+            headerView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor), // Adjust if needed
+            headerView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor), // Adjust if needed
+            headerView.heightAnchor.constraint(equalToConstant: 222),
 
             self.fullnameField.topAnchor.constraint(equalTo: headerView.bottomAnchor, constant: 12),
             self.fullnameField.centerXAnchor.constraint(equalTo: headerView.centerXAnchor),
@@ -127,11 +145,21 @@ class RegisterViewController: UIViewController {
             self.signInButton.topAnchor.constraint(equalTo: termsTextView.bottomAnchor, constant: 11),
             self.signInButton.centerXAnchor.constraint(equalTo: headerView.centerXAnchor),
             self.signInButton.heightAnchor.constraint(equalToConstant: 44),
-            self.signInButton.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.85)
+            self.signInButton.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.85),
+
+            signInButton.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor, constant: -250)
         ])
     }
 
     // MARK: - Selectors
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
+
+    @objc private func didTapBack() {
+        navigationController?.popViewController(animated: true)
+    }
+
     @objc private func didTapSignUp() {
         let registerUserRequest = RegisterUserRequest(
             fullname: self.fullnameField.text ?? "",
@@ -174,6 +202,7 @@ class RegisterViewController: UIViewController {
             }
         }
     }
+
     @objc private func didTapSignIn() {
         self.navigationController?.popToRootViewController(animated: true)
     }
@@ -202,5 +231,42 @@ extension RegisterViewController: UITextViewDelegate {
         textView.delegate = nil
         textView.selectedTextRange = nil
         textView.delegate = self
+    }
+}
+
+extension RegisterViewController {
+
+    private func setBackground() {
+        let backgroundImageView = UIImageView(frame: self.view.bounds)
+        backgroundImageView.image = UIImage(named: "mainBackground")
+        backgroundImageView.contentMode = .scaleAspectFill
+        backgroundImageView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        self.view.addSubview(backgroundImageView)
+      //  self.view.sendSubviewToBack(backgroundImageView)
+
+        let blurEffect = UIBlurEffect(style: .dark)
+        let blurredEffectView = UIVisualEffectView(effect: blurEffect)
+        blurredEffectView.frame = backgroundImageView.bounds
+        blurredEffectView.alpha = 0.7
+        view.addSubview(blurredEffectView)
+    }
+
+    private func setBackButton() {
+        let backButtonImage = UIImage(named: "CustomBackNavIcon")?.withRenderingMode(.alwaysOriginal)
+        let backButton = UIBarButtonItem(
+            image: backButtonImage,
+            style: .plain,
+            target: self,
+            action: #selector(didTapBack)
+        )
+        navigationItem.leftBarButtonItem = backButton
+    }
+
+}
+
+extension RegisterViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
 }

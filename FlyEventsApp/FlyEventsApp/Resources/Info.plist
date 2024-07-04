@@ -4,6 +4,9 @@
 <dict>
 	<key>UIAppFonts</key>
 	<array>
+		<string>CoolveticaEl-Regular.ttf</string>
+		<string>CoolveticaLt-Regular.ttf</string>
+		<string>CoolveticaRg-Bold.ttf</string>
 		<string>CoolveticaRg-Regular.ttf</string>
 	</array>
 	<key>UIApplicationSceneManifest</key>

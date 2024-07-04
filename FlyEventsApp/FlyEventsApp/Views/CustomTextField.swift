@@ -22,7 +22,8 @@ class CustomTextField: UITextField {
         self.authFieldType = fieldType
         super.init(frame: .zero)
 
-        self.backgroundColor = .secondarySystemBackground
+        self.backgroundColor = .darkGray
+        self.textColor = .white
         self.layer.cornerRadius = 10
         self.returnKeyType = .done
         self.autocorrectionType = .no
@@ -34,16 +35,39 @@ class CustomTextField: UITextField {
         switch fieldType {
         case .fullname:
             self.placeholder = "Full Name"
+            let attributes: [NSAttributedString.Key: Any] = [
+                .foregroundColor: UIColor.lightGray,
+                .font: UIFont.coolveticaFont(ofSize: 19, weight: .light)
+                ]
+            self.attributedPlaceholder = NSAttributedString(string: self.placeholder ?? "", attributes: attributes)
+            self.font = UIFont.coolveticaFont(ofSize: 19, weight: .light)
         case .password:
             self.placeholder = "Password"
+            let attributes: [NSAttributedString.Key: Any] = [
+                .foregroundColor: UIColor.lightGray,
+                .font: UIFont.coolveticaFont(ofSize: 19, weight: .light)
+                ]
+            self.attributedPlaceholder = NSAttributedString(string: self.placeholder ?? "", attributes: attributes)
             self.textContentType = .oneTimeCode
             self.isSecureTextEntry = true
         case .email:
             self.placeholder = "Email Address"
+            let attributes: [NSAttributedString.Key: Any] = [
+                .foregroundColor: UIColor.lightGray,
+                .font: UIFont.coolveticaFont(ofSize: 19, weight: .light)
+                ]
+            self.attributedPlaceholder = NSAttributedString(string: self.placeholder ?? "", attributes: attributes)
+            self.font = UIFont.coolveticaFont(ofSize: 19, weight: .light)
             self.keyboardType = .emailAddress
             self.textContentType = .emailAddress
         case .phoneNumber:
             self.placeholder = "Phone Number"
+            let attributes: [NSAttributedString.Key: Any] = [
+                .foregroundColor: UIColor.lightGray,
+                .font: UIFont.coolveticaFont(ofSize: 19, weight: .light)
+                ]
+            self.attributedPlaceholder = NSAttributedString(string: self.placeholder ?? "", attributes: attributes)
+            self.font = UIFont.coolveticaFont(ofSize: 19, weight: .light)
         }
     }
 

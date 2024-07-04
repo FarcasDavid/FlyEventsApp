@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AB1EF18E2C33F6DC003558A4 /* CoolveticaLt-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AB1EF18A2C33F6DB003558A4 /* CoolveticaLt-Regular.ttf */; };
+		AB1EF18F2C33F6DC003558A4 /* CoolveticaEl-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AB1EF18B2C33F6DB003558A4 /* CoolveticaEl-Regular.ttf */; };
+		AB1EF1902C33F6DC003558A4 /* CoolveticaRg-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AB1EF18C2C33F6DB003558A4 /* CoolveticaRg-Regular.ttf */; };
+		AB1EF1912C33F6DC003558A4 /* CoolveticaRg-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AB1EF18D2C33F6DC003558A4 /* CoolveticaRg-Bold.ttf */; };
+		AB1EF1932C33FF63003558A4 /* CAGradientLayer+ListStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1EF1922C33FF62003558A4 /* CAGradientLayer+ListStyle.swift */; };
 		AB1FF2A02BCEB1610000652E /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1FF29F2BCEB1610000652E /* Validator.swift */; };
 		AB26FCEE2BCFFE9700E0F429 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB26FCED2BCFFE9700E0F429 /* UserModel.swift */; };
 		AB280EC52BC97BC200EE0FE1 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB280EC42BC97BC200EE0FE1 /* AuthService.swift */; };
@@ -50,7 +55,6 @@
 		ABBDDB512C0CC35200C03D2E /* DecorDescriptionViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABBDDB502C0CC35200C03D2E /* DecorDescriptionViewController.storyboard */; };
 		ABBDDB542C0CE5DF00C03D2E /* BarDescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBDDB532C0CE5DF00C03D2E /* BarDescriptionViewController.swift */; };
 		ABBDDB562C0CE60500C03D2E /* BarDescriptionViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABBDDB552C0CE60500C03D2E /* BarDescriptionViewController.storyboard */; };
-		ABDDBDD42C0DC454007F2C28 /* CoolveticaRg-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ABDDBDD32C0DC454007F2C28 /* CoolveticaRg-Regular.ttf */; };
 		ABDDBDD62C0DC4F2007F2C28 /* UIFont+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDDBDD52C0DC4F2007F2C28 /* UIFont+extension.swift */; };
 		ABE385082BEB714F00406C8E /* CardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE385072BEB714F00406C8E /* CardCell.swift */; };
 		ABF0823D2C00B91800CFC8E9 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF0823C2C00B91800CFC8E9 /* Event.swift */; };
@@ -65,6 +69,11 @@
 		164E7DA43140207A07F0F6D8 /* Pods-FlyEventsApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlyEventsApp.debug.xcconfig"; path = "Target Support Files/Pods-FlyEventsApp/Pods-FlyEventsApp.debug.xcconfig"; sourceTree = "<group>"; };
 		60C4816CBAD2B9641886C19D /* Pods_FlyEventsApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlyEventsApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		68EF8C9FFB42844B62A60B16 /* Pods-FlyEventsApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlyEventsApp.release.xcconfig"; path = "Target Support Files/Pods-FlyEventsApp/Pods-FlyEventsApp.release.xcconfig"; sourceTree = "<group>"; };
+		AB1EF18A2C33F6DB003558A4 /* CoolveticaLt-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CoolveticaLt-Regular.ttf"; sourceTree = "<group>"; };
+		AB1EF18B2C33F6DB003558A4 /* CoolveticaEl-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CoolveticaEl-Regular.ttf"; sourceTree = "<group>"; };
+		AB1EF18C2C33F6DB003558A4 /* CoolveticaRg-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CoolveticaRg-Regular.ttf"; sourceTree = "<group>"; };
+		AB1EF18D2C33F6DC003558A4 /* CoolveticaRg-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CoolveticaRg-Bold.ttf"; sourceTree = "<group>"; };
+		AB1EF1922C33FF62003558A4 /* CAGradientLayer+ListStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CAGradientLayer+ListStyle.swift"; sourceTree = "<group>"; };
 		AB1FF29D2BCEAC670000652E /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AB1FF29F2BCEB1610000652E /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
 		AB26FCED2BCFFE9700E0F429 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
@@ -110,7 +119,6 @@
 		ABBDDB502C0CC35200C03D2E /* DecorDescriptionViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DecorDescriptionViewController.storyboard; sourceTree = "<group>"; };
 		ABBDDB532C0CE5DF00C03D2E /* BarDescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarDescriptionViewController.swift; sourceTree = "<group>"; };
 		ABBDDB552C0CE60500C03D2E /* BarDescriptionViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BarDescriptionViewController.storyboard; sourceTree = "<group>"; };
-		ABDDBDD32C0DC454007F2C28 /* CoolveticaRg-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CoolveticaRg-Regular.ttf"; sourceTree = "<group>"; };
 		ABDDBDD52C0DC4F2007F2C28 /* UIFont+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+extension.swift"; sourceTree = "<group>"; };
 		ABE385072BEB714F00406C8E /* CardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCell.swift; sourceTree = "<group>"; };
 		ABF0823C2C00B91800CFC8E9 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
@@ -154,6 +162,10 @@
 			children = (
 				ABDDBDD22C0DC430007F2C28 /* Fonts */,
 				AB1FF29D2BCEAC670000652E /* Info.plist */,
+				AB1EF18B2C33F6DB003558A4 /* CoolveticaEl-Regular.ttf */,
+				AB1EF18A2C33F6DB003558A4 /* CoolveticaLt-Regular.ttf */,
+				AB1EF18D2C33F6DC003558A4 /* CoolveticaRg-Bold.ttf */,
+				AB1EF18C2C33F6DB003558A4 /* CoolveticaRg-Regular.ttf */,
 				ABFCC8692BC14EAB0013A472 /* GoogleService-Info.plist */,
 				ABFFB5382BCE93E800A30E78 /* SceneDelegate.swift */,
 				AB7D31A92B7E41F4001278B0 /* AppDelegate.swift */,
@@ -219,6 +231,7 @@
 			children = (
 				ABB2F1DC2BD2712500BFF208 /* UIViewController+Instantiate.swift */,
 				ABDDBDD52C0DC4F2007F2C28 /* UIFont+extension.swift */,
+				AB1EF1922C33FF62003558A4 /* CAGradientLayer+ListStyle.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -352,7 +365,6 @@
 		ABDDBDD22C0DC430007F2C28 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				ABDDBDD32C0DC454007F2C28 /* CoolveticaRg-Regular.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -435,13 +447,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB1EF18E2C33F6DC003558A4 /* CoolveticaLt-Regular.ttf in Resources */,
+				AB1EF18F2C33F6DC003558A4 /* CoolveticaEl-Regular.ttf in Resources */,
+				AB1EF1902C33F6DC003558A4 /* CoolveticaRg-Regular.ttf in Resources */,
 				AB7133CE2BD17D19001CD3B1 /* ChooseEventViewController.storyboard in Resources */,
 				ABBDDB512C0CC35200C03D2E /* DecorDescriptionViewController.storyboard in Resources */,
 				ABBDDB462C0CB79000C03D2E /* DjDescriptionViewController.storyboard in Resources */,
 				ABBDDB4D2C0CC32800C03D2E /* FotoDescriptionViewController.storyboard in Resources */,
 				AB7D31C12B7E4361001278B0 /* .swiftlint.yml in Resources */,
 				ABFCC86A2BC14EAB0013A472 /* GoogleService-Info.plist in Resources */,
-				ABDDBDD42C0DC454007F2C28 /* CoolveticaRg-Regular.ttf in Resources */,
+				AB1EF1912C33F6DC003558A4 /* CoolveticaRg-Bold.ttf in Resources */,
 				ABBDDB562C0CE60500C03D2E /* BarDescriptionViewController.storyboard in Resources */,
 				AB83DEDE2BDBA96200CFE2B8 /* ServicesViewController.storyboard in Resources */,
 				AB7D31B62B7E41F6001278B0 /* LaunchScreen.storyboard in Resources */,
@@ -547,6 +562,7 @@
 				ABDDBDD62C0DC4F2007F2C28 /* UIFont+extension.swift in Sources */,
 				AB46EEE22C1898AF005B2453 /* BarDescription.swift in Sources */,
 				AB7D31AA2B7E41F4001278B0 /* AppDelegate.swift in Sources */,
+				AB1EF1932C33FF63003558A4 /* CAGradientLayer+ListStyle.swift in Sources */,
 				AB26FCEE2BCFFE9700E0F429 /* UserModel.swift in Sources */,
 				AB46EEF32C1B037F005B2453 /* BarDescriptionViewModel.swift in Sources */,
 				AB280EC72BC97C7A00EE0FE1 /* RegisterUserRequest.swift in Sources */,

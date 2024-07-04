@@ -48,22 +48,22 @@ extension BarDescriptionViewController {
         descriptionBackgroundBlur.layer.cornerRadius = 20
         descriptionBackgroundBlur.clipsToBounds = true
 
-        descriptionTitle.font = .coolveticaRegular(ofSize: 35)
+        descriptionTitle.font = .coolveticaFont(ofSize: 35, weight: .regular)
 
         priceBackgroundBlur.layer.cornerRadius = 20
         priceBackgroundBlur.clipsToBounds = true
 
-        priceTitleLabel.font = .coolveticaRegular(ofSize: 15)
+        priceTitleLabel.font = .coolveticaFont(ofSize: 15, weight: .regular)
         priceTitleLabel.textColor = UIColor(white: 1.0, alpha: 0.5)
 
-        priceLabel.font = .coolveticaRegular(ofSize: 30)
+        priceLabel.font = .coolveticaFont(ofSize: 30, weight: .regular)
 
-        packIncludesLabel.font = .coolveticaRegular(ofSize: 15)
+        packIncludesLabel.font = .coolveticaFont(ofSize: 15, weight: .regular)
         packIncludesLabel.textColor = UIColor(white: 1.0, alpha: 0.5)
 
-        packDescriptionLabel.font = .coolveticaRegular(ofSize: 15)
+        packDescriptionLabel.font = .coolveticaFont(ofSize: 15, weight: .regular)
 
-        packDescriptionTitleLabel.font = .coolveticaRegular(ofSize: 20)
+        packDescriptionTitleLabel.font = .coolveticaFont(ofSize: 20, weight: .regular)
         packDescriptionTitleLabel.text = packDescriptionTitleLabel.text?.uppercased()
     }
 }

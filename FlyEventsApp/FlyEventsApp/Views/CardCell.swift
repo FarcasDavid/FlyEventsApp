@@ -36,9 +36,9 @@ class CardCell: UITableViewCell {
 
     func setupCell(with option: ServiceOptionModel, at indexPath: IndexPath) {
         titleLabel.text = option.title
-        titleLabel.font = .coolveticaRegular(ofSize: 18)
+        titleLabel.font = .coolveticaFont(ofSize: 18, weight: .regular)
         priceLabel.text = option.priceWithCurrency
-        priceLabel.font = .coolveticaRegular(ofSize: 18)
+        priceLabel.font = .coolveticaFont(ofSize: 18, weight: .regular)
         pictureView.image = option.image
     }
 }
