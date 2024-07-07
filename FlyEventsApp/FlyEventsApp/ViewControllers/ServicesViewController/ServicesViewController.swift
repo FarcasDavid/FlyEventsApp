@@ -17,23 +17,28 @@ class ServicesViewController: UIViewController {
     @IBOutlet private weak var fotoSectionButton: UIButton!
     @IBOutlet private weak var decorSectionButton: UIButton!
     @IBOutlet private weak var activityIndicator: UIActivityIndicatorView!
-
+    @IBOutlet private weak var totalLabel: UILabel!
+    @IBOutlet private weak var priceLabel: UILabel!
+    @IBOutlet private weak var checkoutButton: UIButton!
+    @IBOutlet private weak var checkoutView: UIView!
+    @IBOutlet private weak var checkoutViewBottomConstraint: NSLayoutConstraint!
 
     private let viewModel = ServicesViewModel()
     var event: Event = Event.majorat
+    private var totalPrice = 0
+    private var selectedServices: [ServiceOptionModel] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setupUI()
+        updateCheckoutUI()
         loadAllData()
     }
 
-    @objc private func didTapBack() {
-        navigationController?.popViewController(animated: true)
-    }
 }
 
+// MARK: UI Config
 extension ServicesViewController {
 
     private func setupUI() {
@@ -53,6 +58,13 @@ extension ServicesViewController {
         decorSectionButton.titleLabel?.font = .coolveticaFont(ofSize: 25, weight: .light)
         decorSectionButton.setTitleColor(.lightGray, for: .normal)
 
+        totalLabel.font = .coolveticaFont(ofSize: 25, weight: .regular)
+        priceLabel.font = .coolveticaFont(ofSize: 25, weight: .regular)
+        checkoutButton.titleLabel?.font = .coolveticaFont(ofSize: 30, weight: .regular)
+        checkoutButton.setTitleColor(.white, for: .normal)
+        checkoutButton.backgroundColor = .darkGray
+        checkoutButton.layer.cornerRadius = 10
+
         djSectionButton.isEnabled = false
         barSectionButton.isEnabled = false
         fotoSectionButton.isEnabled = false
@@ -66,6 +78,19 @@ extension ServicesViewController {
         barSectionButton.isEnabled = true
         fotoSectionButton.isEnabled = true
         decorSectionButton.isEnabled = true
+    }
+
+
+    private func updateCheckoutUI() {
+        UIView.performWithoutAnimation {
+            priceLabel.text = "\(totalPrice) RON"
+            self.view.layoutIfNeeded()
+        }
+
+        UIView.animate(withDuration: 0.5) {
+            self.checkoutViewBottomConstraint.constant = self.totalPrice > 0 ? -8 : -self.checkoutView.frame.height
+            self.view.layoutIfNeeded()
+        }
     }
 
 }
@@ -84,9 +109,12 @@ extension ServicesViewController {
     }
 
     private func setNavigationBar() {
-        if event == .majorat {
+        switch event {
+        case .majorat:
             self.navigationItem.title = "18th Birthday"
-        } else {
+        case .baptising:
+            self.navigationItem.title = "Baptism"
+        default:
             self.navigationItem.title = event.rawValue.capitalized
         }
         let attributes: [NSAttributedString.Key: Any] = [
@@ -135,6 +163,7 @@ extension ServicesViewController {
 
 }
 
+// MARK: Actions
 extension ServicesViewController {
 
     @IBAction private func didTapDJ(_ sender: Any) {
@@ -157,17 +186,21 @@ extension ServicesViewController {
         servicesTableView.scrollToRow(at: indexPath, at: .top, animated: true)
     }
 
+    @objc private func didTapBack() {
+        navigationController?.popViewController(animated: true)
+    }
+
 }
 
+// MARK: Table View Setup
 extension ServicesViewController: UITableViewDelegate, UITableViewDataSource {
 
-
     func numberOfSections(in tableView: UITableView) -> Int {
-        return viewModel.servicesSections.count
+        viewModel.servicesSections.count
     }
 
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return viewModel.servicesSections[section][0].service
+        viewModel.servicesSections[section][0].service
     }
 
     func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
@@ -192,7 +225,7 @@ extension ServicesViewController: UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.servicesSections[section].count
+        viewModel.servicesSections[section].count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -223,34 +256,65 @@ extension ServicesViewController: UITableViewDelegate, UITableViewDataSource {
         default:
             return
         }
-
-
     }
+}
+
+// MARK: Segues
+
+extension ServicesViewController {
 
     private func goToDjDescritpionViewController(with indexPath: IndexPath) {
         let viewController = DjDescriptionViewController.instantiate()
         viewController.id = viewModel.servicesSections[indexPath.section][indexPath.row].id
+        viewController.addToCart = { [weak self] _ in
+            guard let self = self else { return }
+
+            self.totalPrice += viewModel.servicesSections[indexPath.section][indexPath.row].price
+            self.selectedServices.append(viewModel.servicesSections[indexPath.section][indexPath.row])
+
+            updateCheckoutUI()
+        }
         present(viewController, animated: true)
-
-
     }
 
     private func goToBarDescriptionViewController(with indexPath: IndexPath) {
         let viewController = BarDescriptionViewController.instantiate()
         viewController.id = viewModel.servicesSections[indexPath.section][indexPath.row].id
-        present(viewController, animated: true)
+        viewController.addToCart = { [weak self] _ in
+            guard let self = self else { return }
 
+            self.totalPrice += viewModel.servicesSections[indexPath.section][indexPath.row].price
+            self.selectedServices.append(viewModel.servicesSections[indexPath.section][indexPath.row])
+            updateCheckoutUI()
+        }
+
+        present(viewController, animated: true)
     }
 
     private func goToFotoDescritpionViewController(with indexPath: IndexPath) {
         let viewController = FotoDescriptionViewController.instantiate()
         viewController.id = viewModel.servicesSections[indexPath.section][indexPath.row].id
+        viewController.addToCart = { [weak self] _ in
+            guard let self = self else { return }
+
+            self.totalPrice += viewModel.servicesSections[indexPath.section][indexPath.row].price
+            self.selectedServices.append(viewModel.servicesSections[indexPath.section][indexPath.row])
+            updateCheckoutUI()
+        }
         present(viewController, animated: true)
     }
 
     private func goToDecorDescritpionViewController(with indexPath: IndexPath) {
         let viewController = DecorDescriptionViewController.instantiate()
         viewController.id = viewModel.servicesSections[indexPath.section][indexPath.row].id
+        viewController.addToCart = { [weak self] _ in
+            guard let self = self else { return }
+
+
+            self.totalPrice += viewModel.servicesSections[indexPath.section][indexPath.row].price
+            self.selectedServices.append(viewModel.servicesSections[indexPath.section][indexPath.row])
+            updateCheckoutUI()
+        }
         present(viewController, animated: true)
     }
 

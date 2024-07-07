@@ -28,9 +28,11 @@ class DjDescriptionViewController: UIViewController {
     @IBOutlet private weak var packDescriptionLabel: UILabel!
     @IBOutlet private weak var packIncludesLabel: UILabel!
     @IBOutlet private weak var descriptionBackgroundBlur: UIVisualEffectView!
+    @IBOutlet private weak var cartButton: UIButton!
 
     private let viewModel = DjDescriptionViewModel()
     var id: String = ""
+    var addToCart: ((String) -> Void)?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,6 +40,7 @@ class DjDescriptionViewController: UIViewController {
         loadAllData()
         setupUI()
     }
+
 
 }
 
@@ -86,6 +89,20 @@ extension DjDescriptionViewController {
         packDescriptionLabel.font = .coolveticaFont(ofSize: 30, weight: .regular)
         packDescriptionLabel.adjustsFontSizeToFitWidth = true
         packDescriptionLabel.minimumScaleFactor = 0.5
+
+        cartButton.titleLabel?.font = .coolveticaFont(ofSize: 20, weight: .regular)
+        cartButton.setTitleColor(.white, for: .normal)
+        cartButton.backgroundColor = .darkGray
+        cartButton.layer.cornerRadius = 10
+    }
+
+}
+
+extension DjDescriptionViewController {
+
+    @IBAction private func didTapCartButton(_ sender: Any) {
+        addToCart?(id)
+        self.dismiss(animated: true)
     }
 
 }

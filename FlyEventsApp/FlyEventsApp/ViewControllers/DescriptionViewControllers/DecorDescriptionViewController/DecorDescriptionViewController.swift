@@ -28,6 +28,7 @@ class DecorDescriptionViewController: UIViewController {
 
     private var viewModel = DecorDescriptionViewModel()
     var id: String = ""
+    var addToCart: ((String) -> Void)?
 
 
    override func viewDidLoad() {
@@ -101,4 +102,11 @@ extension DecorDescriptionViewController {
         rightBottomImageView.image = viewModel.decorDescriptionModel?.images[4]
     }
 
+}
+
+extension DecorDescriptionViewController {
+    @IBAction private func didTapCartButton(_ sender: Any) {
+        addToCart?(id)
+        self.dismiss(animated: true)
+    }
 }

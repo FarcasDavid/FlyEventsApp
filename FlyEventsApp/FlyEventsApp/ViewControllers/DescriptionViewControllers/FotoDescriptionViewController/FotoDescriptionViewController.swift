@@ -17,6 +17,7 @@ class FotoDescriptionViewController: UIViewController {
 
     private let viewModel = FotoDescriptionViewModel()
     var id: String = ""
+    var addToCart: ((String) -> Void)?
 
 
     override func viewDidLoad() {
@@ -47,4 +48,12 @@ extension FotoDescriptionViewController {
         fotoImageView.image = viewModel.fotoDescriptionModel?.image
     }
 
+}
+
+extension FotoDescriptionViewController {
+
+    @IBAction private func didTapCartButton(_ sender: Any) {
+        addToCart?(id)
+        self.dismiss(animated: true)
+    }
 }

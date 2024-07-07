@@ -88,7 +88,6 @@ class ChooseEventViewController: UIViewController {
 extension ChooseEventViewController {
 
     @IBAction private func didTapWedding(_ sender: UITapGestureRecognizer) {
-        print("did tap wedding")
         goToServicesViewController(for: .wedding)
     }
     @IBAction private func didTapBaptism(_ sender: UITapGestureRecognizer) {

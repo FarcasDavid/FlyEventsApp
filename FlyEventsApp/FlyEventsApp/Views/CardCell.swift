@@ -22,8 +22,6 @@ class CardCell: UITableViewCell {
         setupView()
     }
 
-    // TODO: Vezi cum rotunjesti containerView fara sa pierzi umbra
-
     private func setupView() {
 
         cardView.layer.cornerRadius = 20.0
@@ -54,4 +52,5 @@ class CardCell: UITableViewCell {
         priceLabel.font = .coolveticaFont(ofSize: 20, weight: .regular)
         pictureView.image = option.image
     }
+
 }

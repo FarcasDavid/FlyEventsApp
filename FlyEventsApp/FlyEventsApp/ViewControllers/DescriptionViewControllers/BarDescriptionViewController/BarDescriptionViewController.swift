@@ -22,9 +22,11 @@ class BarDescriptionViewController: UIViewController {
     @IBOutlet private weak var packDescriptionLabel: UILabel!
     @IBOutlet private weak var descriptionBackgroundBlur: UIVisualEffectView!
     @IBOutlet private weak var packDescriptionTitleLabel: UILabel!
+    @IBOutlet private weak var cartButton: UIButton!
 
     private var viewModel = BarDescriptionViewModel()
     var id: String = ""
+    var addToCart: ((String) -> Void)?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -110,3 +112,12 @@ extension BarDescriptionViewController {
             self.view.sendSubviewToBack(backgroundImageView)
         }
     }
+
+extension BarDescriptionViewController {
+
+    @IBAction private func didTapCartButton(_ sender: Any) {
+        addToCart?(id)
+        self.dismiss(animated: true)
+    }
+
+}
