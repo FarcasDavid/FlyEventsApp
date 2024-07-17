@@ -186,6 +186,13 @@ extension ServicesViewController {
         servicesTableView.scrollToRow(at: indexPath, at: .top, animated: true)
     }
 
+    @IBAction private func didTapCheckout(_ sender: Any) {
+        let checkoutViewController = CheckoutViewController.instantiate()
+        checkoutViewController.selectedServices = selectedServices
+        checkoutViewController.totalPrice = totalPrice
+        navigationController?.pushViewController(checkoutViewController, animated: true)
+    }
+
     @objc private func didTapBack() {
         navigationController?.popViewController(animated: true)
     }
@@ -260,7 +267,6 @@ extension ServicesViewController: UITableViewDelegate, UITableViewDataSource {
 }
 
 // MARK: Segues
-
 extension ServicesViewController {
 
     private func goToDjDescritpionViewController(with indexPath: IndexPath) {
@@ -280,16 +286,27 @@ extension ServicesViewController {
     private func goToBarDescriptionViewController(with indexPath: IndexPath) {
         let viewController = BarDescriptionViewController.instantiate()
         viewController.id = viewModel.servicesSections[indexPath.section][indexPath.row].id
-        viewController.addToCart = { [weak self] _ in
+        viewController.addToCart = { [weak self] _, completion in
             guard let self = self else { return }
 
-            self.totalPrice += viewModel.servicesSections[indexPath.section][indexPath.row].price
-            self.selectedServices.append(viewModel.servicesSections[indexPath.section][indexPath.row])
-            updateCheckoutUI()
-        }
+            AlertManager.barNumberOfPeopleAlert(on: viewController) { [weak self] number in
+                guard let self = self else { return }
 
+                if let number = number {
+                    let result = number * self.viewModel.servicesSections[indexPath.section][indexPath.row].price
+                    self.totalPrice += result
+                    self.selectedServices.append(self.viewModel.servicesSections[indexPath.section][indexPath.row])
+                    self.updateCheckoutUI()
+                    completion(true) // Signal successful addToCart operation
+                } else {
+                    print("No valid number entered")
+                    completion(false) // Signal failure of addToCart operation
+                }
+            }
+        }
         present(viewController, animated: true)
     }
+
 
     private func goToFotoDescritpionViewController(with indexPath: IndexPath) {
         let viewController = FotoDescriptionViewController.instantiate()
@@ -309,7 +326,6 @@ extension ServicesViewController {
         viewController.id = viewModel.servicesSections[indexPath.section][indexPath.row].id
         viewController.addToCart = { [weak self] _ in
             guard let self = self else { return }
-
 
             self.totalPrice += viewModel.servicesSections[indexPath.section][indexPath.row].price
             self.selectedServices.append(viewModel.servicesSections[indexPath.section][indexPath.row])

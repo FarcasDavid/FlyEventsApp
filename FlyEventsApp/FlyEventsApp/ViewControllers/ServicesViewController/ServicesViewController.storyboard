@@ -21,7 +21,7 @@
                                 <rect key="frame" x="0.0" y="59" width="393" height="60"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A7m-dT-UIf">
-                                        <rect key="frame" x="66" y="0.0" width="60" height="60"/>
+                                        <rect key="frame" x="82" y="0.0" width="60" height="60"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="60" id="gv9-36-TSf"/>
                                         </constraints>
@@ -34,7 +34,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CXa-sM-s84">
-                                        <rect key="frame" x="276" y="0.0" width="85" height="60"/>
+                                        <rect key="frame" x="292" y="0.0" width="85" height="60"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="85" id="wLu-gC-IU1"/>
                                         </constraints>
@@ -47,7 +47,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fTP-9V-k2u">
-                                        <rect key="frame" x="6" y="0.0" width="60" height="60"/>
+                                        <rect key="frame" x="22" y="0.0" width="60" height="60"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="60" id="gue-SG-hlj"/>
                                         </constraints>
@@ -60,7 +60,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N3b-cb-ij8">
-                                        <rect key="frame" x="126" y="0.0" width="150" height="60"/>
+                                        <rect key="frame" x="142" y="0.0" width="150" height="60"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="150" id="5p7-OT-o4Q"/>
                                         </constraints>
@@ -79,7 +79,7 @@
                                     <constraint firstItem="A7m-dT-UIf" firstAttribute="top" secondItem="dWZ-15-NWY" secondAttribute="top" id="5GH-rb-taj"/>
                                     <constraint firstItem="CXa-sM-s84" firstAttribute="leading" secondItem="N3b-cb-ij8" secondAttribute="trailing" id="7i9-RR-IEr"/>
                                     <constraint firstAttribute="bottom" secondItem="CXa-sM-s84" secondAttribute="bottom" id="A6O-4K-yOk"/>
-                                    <constraint firstAttribute="trailing" secondItem="CXa-sM-s84" secondAttribute="trailing" constant="32" id="A7m-qC-kz1"/>
+                                    <constraint firstAttribute="trailing" secondItem="CXa-sM-s84" secondAttribute="trailing" constant="16" id="A7m-qC-kz1"/>
                                     <constraint firstItem="CXa-sM-s84" firstAttribute="top" secondItem="dWZ-15-NWY" secondAttribute="top" id="GT5-Q7-i0l"/>
                                     <constraint firstItem="A7m-dT-UIf" firstAttribute="leading" secondItem="fTP-9V-k2u" secondAttribute="trailing" id="LGJ-wL-k4M"/>
                                     <constraint firstAttribute="bottom" secondItem="A7m-dT-UIf" secondAttribute="bottom" id="TyA-Ze-gPl"/>
@@ -216,6 +216,9 @@
                                         <color key="tintColor" systemColor="tintColor"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Checkout"/>
+                                        <connections>
+                                            <action selector="didTapCheckout:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="AwB-gT-6Zr"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

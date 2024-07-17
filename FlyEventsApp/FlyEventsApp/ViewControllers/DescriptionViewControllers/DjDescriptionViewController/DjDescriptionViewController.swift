@@ -86,7 +86,7 @@ extension DjDescriptionViewController {
         packIncludesLabel.font = .coolveticaFont(ofSize: 15, weight: .regular)
         packIncludesLabel.textColor = UIColor(white: 1.0, alpha: 0.5)
 
-        packDescriptionLabel.font = .coolveticaFont(ofSize: 30, weight: .regular)
+        packDescriptionLabel.font = .coolveticaFont(ofSize: 25, weight: .regular)
         packDescriptionLabel.adjustsFontSizeToFitWidth = true
         packDescriptionLabel.minimumScaleFactor = 0.5
 
@@ -134,6 +134,9 @@ extension DjDescriptionViewController {
         numberOfPeopleLabel.text = viewModel.djDescriptionModel?.numberOfPeople
         packDescriptionLabel.text =
         viewModel.djDescriptionModel?.packDescription.replacingOccurrences(of: "\\n", with: "\n")
+        if packDescriptionLabel.text?.count ?? 0 > 100 {
+            packDescriptionLabel.font = .coolveticaFont(ofSize: 20, weight: .regular)
+        }
         setBackground()
     }
 

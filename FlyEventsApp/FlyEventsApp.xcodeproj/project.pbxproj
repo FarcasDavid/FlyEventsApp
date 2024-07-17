@@ -29,7 +29,13 @@
 		AB46EEF32C1B037F005B2453 /* BarDescriptionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB46EEF22C1B037F005B2453 /* BarDescriptionViewModel.swift */; };
 		AB46EEF52C1B2704005B2453 /* FotoDescriptionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB46EEF42C1B2704005B2453 /* FotoDescriptionViewModel.swift */; };
 		AB46EEF72C1B2B53005B2453 /* DecorDescriptionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB46EEF62C1B2B53005B2453 /* DecorDescriptionViewModel.swift */; };
+		AB4748112C3C25B3003EF31E /* CheckoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4748102C3C25B3003EF31E /* CheckoutViewController.swift */; };
+		AB4748132C3C25D2003EF31E /* CheckoutViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB4748122C3C25D2003EF31E /* CheckoutViewController.storyboard */; };
+		AB4748152C3C4AC4003EF31E /* CheckoutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4748142C3C4AC4003EF31E /* CheckoutCell.swift */; };
 		AB5180262BC8F90F007879F2 /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5180252BC8F90F007879F2 /* AlertManager.swift */; };
+		AB58D5702C47C00A003BB9FD /* CheckoutViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB58D56F2C47C00A003BB9FD /* CheckoutViewModel.swift */; };
+		AB58D5722C47CF57003BB9FD /* OrderProcessedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB58D5712C47CF57003BB9FD /* OrderProcessedViewController.swift */; };
+		AB58D5742C47CF77003BB9FD /* OrderProcessedViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB58D5732C47CF77003BB9FD /* OrderProcessedViewController.storyboard */; };
 		AB7133CC2BD17CB2001CD3B1 /* ChooseEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7133CB2BD17CB2001CD3B1 /* ChooseEventViewController.swift */; };
 		AB7133CE2BD17D19001CD3B1 /* ChooseEventViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB7133CD2BD17D19001CD3B1 /* ChooseEventViewController.storyboard */; };
 		AB7D31AA2B7E41F4001278B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7D31A92B7E41F4001278B0 /* AppDelegate.swift */; };
@@ -92,7 +98,13 @@
 		AB46EEF22C1B037F005B2453 /* BarDescriptionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarDescriptionViewModel.swift; sourceTree = "<group>"; };
 		AB46EEF42C1B2704005B2453 /* FotoDescriptionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FotoDescriptionViewModel.swift; sourceTree = "<group>"; };
 		AB46EEF62C1B2B53005B2453 /* DecorDescriptionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecorDescriptionViewModel.swift; sourceTree = "<group>"; };
+		AB4748102C3C25B3003EF31E /* CheckoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutViewController.swift; sourceTree = "<group>"; };
+		AB4748122C3C25D2003EF31E /* CheckoutViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CheckoutViewController.storyboard; sourceTree = "<group>"; };
+		AB4748142C3C4AC4003EF31E /* CheckoutCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutCell.swift; sourceTree = "<group>"; };
 		AB5180252BC8F90F007879F2 /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
+		AB58D56F2C47C00A003BB9FD /* CheckoutViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutViewModel.swift; sourceTree = "<group>"; };
+		AB58D5712C47CF57003BB9FD /* OrderProcessedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderProcessedViewController.swift; sourceTree = "<group>"; };
+		AB58D5732C47CF77003BB9FD /* OrderProcessedViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OrderProcessedViewController.storyboard; sourceTree = "<group>"; };
 		AB7133CB2BD17CB2001CD3B1 /* ChooseEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseEventViewController.swift; sourceTree = "<group>"; };
 		AB7133CD2BD17D19001CD3B1 /* ChooseEventViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChooseEventViewController.storyboard; sourceTree = "<group>"; };
 		AB7D31A62B7E41F4001278B0 /* FlyEventsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlyEventsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -187,6 +199,7 @@
 		AB3872362B7E64E800B5B0F8 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				AB47480F2C3C256D003EF31E /* CheckoutViewControllers */,
 				ABBDDB422C0CB75B00C03D2E /* DescriptionViewControllers */,
 				ABBDDB412C0CB74600C03D2E /* AuthentificationViewControllers */,
 				AB83DEDF2BDBA96800CFE2B8 /* ServicesViewController */,
@@ -203,6 +216,7 @@
 				AB46EEF22C1B037F005B2453 /* BarDescriptionViewModel.swift */,
 				AB46EEF42C1B2704005B2453 /* FotoDescriptionViewModel.swift */,
 				AB46EEF62C1B2B53005B2453 /* DecorDescriptionViewModel.swift */,
+				AB58D56F2C47C00A003BB9FD /* CheckoutViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -251,6 +265,17 @@
 			path = DescriptionModels;
 			sourceTree = "<group>";
 		};
+		AB47480F2C3C256D003EF31E /* CheckoutViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				AB4748102C3C25B3003EF31E /* CheckoutViewController.swift */,
+				AB4748122C3C25D2003EF31E /* CheckoutViewController.storyboard */,
+				AB58D5712C47CF57003BB9FD /* OrderProcessedViewController.swift */,
+				AB58D5732C47CF77003BB9FD /* OrderProcessedViewController.storyboard */,
+			);
+			path = CheckoutViewControllers;
+			sourceTree = "<group>";
+		};
 		AB7D319D2B7E41F4001278B0 = {
 			isa = PBXGroup;
 			children = (
@@ -291,6 +316,7 @@
 				AB7F17242BC690EB00EC5145 /* CustomTextField.swift */,
 				AB7F17262BC6A1FA00EC5145 /* CustomButton.swift */,
 				ABE385072BEB714F00406C8E /* CardCell.swift */,
+				AB4748142C3C4AC4003EF31E /* CheckoutCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -448,9 +474,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				AB1EF18E2C33F6DC003558A4 /* CoolveticaLt-Regular.ttf in Resources */,
+				AB58D5742C47CF77003BB9FD /* OrderProcessedViewController.storyboard in Resources */,
 				AB1EF18F2C33F6DC003558A4 /* CoolveticaEl-Regular.ttf in Resources */,
 				AB1EF1902C33F6DC003558A4 /* CoolveticaRg-Regular.ttf in Resources */,
 				AB7133CE2BD17D19001CD3B1 /* ChooseEventViewController.storyboard in Resources */,
+				AB4748132C3C25D2003EF31E /* CheckoutViewController.storyboard in Resources */,
 				ABBDDB512C0CC35200C03D2E /* DecorDescriptionViewController.storyboard in Resources */,
 				ABBDDB462C0CB79000C03D2E /* DjDescriptionViewController.storyboard in Resources */,
 				ABBDDB4D2C0CC32800C03D2E /* FotoDescriptionViewController.storyboard in Resources */,
@@ -566,13 +594,17 @@
 				AB26FCEE2BCFFE9700E0F429 /* UserModel.swift in Sources */,
 				AB46EEF32C1B037F005B2453 /* BarDescriptionViewModel.swift in Sources */,
 				AB280EC72BC97C7A00EE0FE1 /* RegisterUserRequest.swift in Sources */,
+				AB4748112C3C25B3003EF31E /* CheckoutViewController.swift in Sources */,
 				AB7133CC2BD17CB2001CD3B1 /* ChooseEventViewController.swift in Sources */,
 				ABFFB5372BCE87ED00A30E78 /* LoginUserRequest.swift in Sources */,
+				AB4748152C3C4AC4003EF31E /* CheckoutCell.swift in Sources */,
 				ABF0823D2C00B91800CFC8E9 /* Event.swift in Sources */,
 				AB46EEED2C189CAF005B2453 /* FotoDescriptionModel.swift in Sources */,
+				AB58D5702C47C00A003BB9FD /* CheckoutViewModel.swift in Sources */,
 				AB7F17292BC6AFD100EC5145 /* TermsAndPrivacyViewController.swift in Sources */,
 				AB7F171E2BC661B600EC5145 /* RegisterViewController.swift in Sources */,
 				ABBDDB4F2C0CC34100C03D2E /* DecorDescriptionViewController.swift in Sources */,
+				AB58D5722C47CF57003BB9FD /* OrderProcessedViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -724,8 +756,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIStatusBarStyle = "";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -818,8 +850,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIStatusBarStyle = "";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

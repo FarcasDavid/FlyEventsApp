@@ -12,8 +12,8 @@ class FotoDescriptionViewController: UIViewController {
 
     @IBOutlet private weak var loadingIndicatorView: UIView!
     @IBOutlet private weak var activityIndicator: UIActivityIndicatorView!
-
     @IBOutlet private weak var fotoImageView: UIImageView!
+    @IBOutlet private weak var cartButton: UIButton!
 
     private let viewModel = FotoDescriptionViewModel()
     var id: String = ""
@@ -46,6 +46,10 @@ extension FotoDescriptionViewController {
 
     private func updateUI() {
         fotoImageView.image = viewModel.fotoDescriptionModel?.image
+        cartButton.titleLabel?.font = .coolveticaFont(ofSize: 20, weight: .regular)
+        cartButton.setTitleColor(.white, for: .normal)
+        cartButton.backgroundColor = .darkGray
+        cartButton.layer.cornerRadius = 10
     }
 
 }

@@ -49,7 +49,7 @@
                                 </constraints>
                             </view>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cof-jA-fpU">
-                                <rect key="frame" x="16" y="107" width="361" height="90"/>
+                                <rect key="frame" x="16" y="75" width="361" height="90"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Vym-4C-lDF">
                                     <rect key="frame" x="0.0" y="0.0" width="361" height="90"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -72,13 +72,13 @@
                                 <blurEffect style="light"/>
                             </visualEffectView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Uef-PF-3V0">
-                                <rect key="frame" x="20" y="205" width="353" height="230"/>
+                                <rect key="frame" x="20" y="173" width="353" height="230"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="230" id="4jX-0Z-KNW"/>
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="f9W-cg-dVp">
-                                <rect key="frame" x="20" y="451" width="353" height="120"/>
+                                <rect key="frame" x="20" y="419" width="353" height="120"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qek-J5-gt8" userLabel="Pack Price View">
                                         <rect key="frame" x="0.0" y="0.0" width="168.66666666666666" height="120"/>
@@ -91,7 +91,7 @@
                                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uzn-O4-nwU">
                                                 <rect key="frame" x="8" y="36" width="152.66666666666666" height="76"/>
                                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="NUZ-VC-4c5">
-                                                    <rect key="frame" x="0.0" y="0.0" width="152.66666666666666" height="76"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="153" height="76"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kNM-SZ-30u">
@@ -132,11 +132,11 @@
                                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LWy-eV-udl">
                                                 <rect key="frame" x="8" y="36.333333333333321" width="152.33333333333334" height="75.666666666666686"/>
                                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="3SQ-RQ-cLm">
-                                                    <rect key="frame" x="0.0" y="0.0" width="152.33333333333334" height="75.666666666666686"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="152" height="76"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X1I-ev-blf">
-                                                            <rect key="frame" x="76.000000000000028" y="38.000000000000057" width="0.0" height="0.0"/>
+                                                            <rect key="frame" x="76.000000000000028" y="38" width="0.0" height="0.0"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
@@ -166,19 +166,19 @@
                                 </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pack includes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t1t-5Y-O7u">
-                                <rect key="frame" x="28.000000000000007" y="579" width="104.66666666666669" height="20.333333333333371"/>
+                                <rect key="frame" x="28.000000000000007" y="547" width="104.66666666666669" height="20.333333333333371"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mLB-0Y-wMF">
-                                <rect key="frame" x="28" y="607.33333333333337" width="341" height="103.66666666666663"/>
+                                <rect key="frame" x="28" y="575.33333333333337" width="341" height="159.66666666666663"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="DtG-ts-ubC">
-                                    <rect key="frame" x="0.0" y="0.0" width="341" height="103.66666666666663"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="341" height="160"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kOC-QI-oyU">
-                                            <rect key="frame" x="170.66666666666666" y="52" width="0.0" height="0.0"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="kOC-QI-oyU">
+                                            <rect key="frame" x="170.66666666666666" y="80" width="0.0" height="0.0"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
@@ -215,7 +215,7 @@
                             <constraint firstItem="Vdc-Tg-jqG" firstAttribute="centerX" secondItem="Cof-jA-fpU" secondAttribute="centerX" id="8ef-nR-mP2"/>
                             <constraint firstItem="t1t-5Y-O7u" firstAttribute="leading" secondItem="Vdc-Tg-jqG" secondAttribute="leading" constant="24" id="9la-ck-HOe"/>
                             <constraint firstItem="Cof-jA-fpU" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="AG4-SJ-Szr"/>
-                            <constraint firstItem="Cof-jA-fpU" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="48" id="EN4-og-4Bl"/>
+                            <constraint firstItem="Cof-jA-fpU" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="16" id="EN4-og-4Bl"/>
                             <constraint firstItem="Uef-PF-3V0" firstAttribute="leading" secondItem="Vdc-Tg-jqG" secondAttribute="leading" constant="16" id="EqS-oT-wii"/>
                             <constraint firstItem="mLB-0Y-wMF" firstAttribute="leading" secondItem="Vdc-Tg-jqG" secondAttribute="leading" constant="24" id="IEN-3c-3Gq"/>
                             <constraint firstAttribute="bottom" secondItem="Mwn-mj-nmT" secondAttribute="bottom" id="Mpn-e4-HLn"/>
@@ -233,7 +233,7 @@
                             <constraint firstItem="f9W-cg-dVp" firstAttribute="leading" secondItem="Vdc-Tg-jqG" secondAttribute="leading" constant="16" id="mTz-ib-goX"/>
                             <constraint firstItem="Vdc-Tg-jqG" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="4" id="mbE-2o-Jxv"/>
                             <constraint firstItem="Vdc-Tg-jqG" firstAttribute="trailing" secondItem="f9W-cg-dVp" secondAttribute="trailing" constant="16" id="qZ4-K9-xHx"/>
-                            <constraint firstItem="Vdc-Tg-jqG" firstAttribute="bottom" secondItem="mLB-0Y-wMF" secondAttribute="bottom" constant="40" id="vM7-cX-2L2"/>
+                            <constraint firstItem="Vdc-Tg-jqG" firstAttribute="bottom" secondItem="mLB-0Y-wMF" secondAttribute="bottom" constant="16" id="vM7-cX-2L2"/>
                             <constraint firstItem="Vdc-Tg-jqG" firstAttribute="trailing" secondItem="Uef-PF-3V0" secondAttribute="trailing" constant="16" id="wz7-ti-Pdv"/>
                             <constraint firstItem="Uef-PF-3V0" firstAttribute="top" secondItem="Cof-jA-fpU" secondAttribute="bottom" constant="8" id="yT6-I3-MUA"/>
                             <constraint firstItem="DnH-fE-hed" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="zxl-Mr-9FU"/>

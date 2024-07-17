@@ -15,6 +15,48 @@ class AlertManager {
             viewcontroller.present(alert, animated: true)
         }
     }
+
+    private static func showTextFieldAlert(
+        on viewController: UIViewController,
+        title: String,
+        completion: @escaping (Int?) -> Void
+    ) {
+        DispatchQueue.main.async {
+            let alert = UIAlertController(
+                title: title,
+                message: "Please enter only digits",
+                preferredStyle: .alert
+            )
+            alert.overrideUserInterfaceStyle = .dark
+            alert.addTextField { textField in
+                textField.keyboardType = .numberPad
+            }
+            alert.addAction(
+                UIAlertAction(
+                    title: "Cancel",
+                    style: .default,
+                    handler: { _ in
+                        completion(nil)
+                    }
+                )
+            )
+            alert.addAction(
+                UIAlertAction(
+                    title: "OK",
+                    style: .default,
+                    handler: { [weak alert] _ in
+                        if let textField = alert?.textFields?.first, let text = textField.text, let number = Int(text) {
+                            completion(number)
+                        } else {
+                            completion(nil)
+                        }
+                    }
+                )
+            )
+            viewController.present(alert, animated: true)
+        }
+    }
+
 }
 
 // MARK: - Validation Alerts
@@ -35,9 +77,7 @@ extension AlertManager {
             message: "Please enter a 10 digit phone number, starting with 07."
         )
     }
-//    public static func showInvalidUsernameAlert(on viewcontroller: UIViewController) {
-//        self.showBasicAlert(on: viewcontroller, title: "Invalid Username", message: "Please enter a valid username.")
-//    }
+
 }
 
 
@@ -130,5 +170,20 @@ extension AlertManager {
             title: "Error Fetching User",
             message: "\(error.localizedDescription)"
         )
+    }
+}
+
+// MARK: - Number of people for Bar alert
+extension AlertManager {
+
+    public static func barNumberOfPeopleAlert(
+        on viewcontroller: UIViewController,
+        completion: @escaping (Int?) -> Void) {
+        self.showTextFieldAlert(
+            on: viewcontroller,
+            title: "Enter the number of people attending:"
+        ) { number in
+            completion(number)
+        }
     }
 }

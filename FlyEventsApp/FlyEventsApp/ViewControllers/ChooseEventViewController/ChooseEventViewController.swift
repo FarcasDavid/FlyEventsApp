@@ -41,6 +41,10 @@ class ChooseEventViewController: UIViewController {
 
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
+
     // MARK: - UI Setup
     private func setupUI() {
         weddingView.layer.cornerRadius = 15

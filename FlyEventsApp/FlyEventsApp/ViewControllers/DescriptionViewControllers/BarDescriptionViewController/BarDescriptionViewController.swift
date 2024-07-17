@@ -26,7 +26,7 @@ class BarDescriptionViewController: UIViewController {
 
     private var viewModel = BarDescriptionViewModel()
     var id: String = ""
-    var addToCart: ((String) -> Void)?
+    var addToCart: ((String, @escaping (Bool) -> Void) -> Void)?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -69,6 +69,11 @@ extension BarDescriptionViewController {
 
         packDescriptionTitleLabel.font = .coolveticaFont(ofSize: 20, weight: .regular)
         packDescriptionTitleLabel.text = packDescriptionTitleLabel.text?.uppercased()
+
+        cartButton.titleLabel?.font = .coolveticaFont(ofSize: 20, weight: .regular)
+        cartButton.setTitleColor(.white, for: .normal)
+        cartButton.backgroundColor = .darkGray
+        cartButton.layer.cornerRadius = 10
     }
 }
 
@@ -100,6 +105,9 @@ extension BarDescriptionViewController {
             viewModel.barDescriptionModel?.packDescriptionTitle.replacingOccurrences(of: "\\n", with: "\n")
             packDescriptionLabel.text =
             viewModel.barDescriptionModel?.packDescription.replacingOccurrences(of: "\\n", with: "\n")
+            if packDescriptionLabel.text?.count ?? 0 > 100 {
+                packDescriptionLabel.font = .coolveticaFont(ofSize: 12, weight: .regular)
+            }
             setBackground()
         }
 
@@ -116,8 +124,17 @@ extension BarDescriptionViewController {
 extension BarDescriptionViewController {
 
     @IBAction private func didTapCartButton(_ sender: Any) {
-        addToCart?(id)
-        self.dismiss(animated: true)
+        addToCart?(id) { success in
+            if success {
+                DispatchQueue.main.async {
+                    self.dismiss(animated: true)
+                }
+            } else {
+                // TODO: fa o alerta cu non digit input not allowed sau ceva
+                print("addToCart operation failed")
+            }
+
+        }
     }
 
 }

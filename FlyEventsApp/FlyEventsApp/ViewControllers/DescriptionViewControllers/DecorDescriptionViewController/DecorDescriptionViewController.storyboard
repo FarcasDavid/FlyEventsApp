@@ -131,9 +131,6 @@
                                         <color key="tintColor" systemColor="tintColor"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Add to Cart"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Add to Cart">
-                                            <color key="baseBackgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </buttonConfiguration>
                                         <connections>
                                             <action selector="didTapCartButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="0Y9-ao-7rX"/>
                                         </connections>
@@ -182,6 +179,7 @@
                     </view>
                     <connections>
                         <outlet property="activityIndicator" destination="vH9-DC-9n9" id="qHD-fC-JSQ"/>
+                        <outlet property="cartButton" destination="L0C-6M-Ezh" id="kZu-vC-LOd"/>
                         <outlet property="leftBottomImageView" destination="n1M-gr-qNs" id="WDC-zr-M23"/>
                         <outlet property="leftBottomView" destination="aJN-zI-9Bl" id="3ur-gB-fbU"/>
                         <outlet property="leftTopImageView" destination="W35-5l-A0z" id="7ge-87-qXp"/>

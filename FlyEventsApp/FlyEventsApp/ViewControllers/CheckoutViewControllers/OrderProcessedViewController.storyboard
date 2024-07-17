@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Order Processed View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="OrderProcessedViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="OrderProcessedViewController" customModule="FlyEventsApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="crG-yM-9CW">
+                                <rect key="frame" x="8" y="351" width="377" height="150"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Order Sent Successfully!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c7R-Df-WmU">
+                                        <rect key="frame" x="8" y="8" width="361" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v3F-vm-ESg">
+                                        <rect key="frame" x="8" y="112" width="361" height="30"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Back to choosing an event"/>
+                                        <connections>
+                                            <action selector="didTapBack:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="qGh-cg-SpH"/>
+                                        </connections>
+                                    </button>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="success" translatesAutoresizingMaskIntoConstraints="NO" id="eAI-uC-Fg4">
+                                        <rect key="frame" x="163.66666666666666" y="37" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="BQR-nb-zOF"/>
+                                            <constraint firstAttribute="height" constant="50" id="b6c-n4-PwC"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="v3F-vm-ESg" secondAttribute="trailing" constant="8" id="0a7-tH-kNw"/>
+                                    <constraint firstAttribute="trailing" secondItem="c7R-Df-WmU" secondAttribute="trailing" constant="8" id="AA0-8t-sGq"/>
+                                    <constraint firstItem="c7R-Df-WmU" firstAttribute="top" secondItem="crG-yM-9CW" secondAttribute="top" constant="8" id="J0o-gW-KgZ"/>
+                                    <constraint firstItem="eAI-uC-Fg4" firstAttribute="top" secondItem="c7R-Df-WmU" secondAttribute="bottom" constant="8" id="Wn6-mQ-QvS"/>
+                                    <constraint firstAttribute="bottom" secondItem="v3F-vm-ESg" secondAttribute="bottom" constant="8" id="Y0Z-YJ-xVZ"/>
+                                    <constraint firstItem="v3F-vm-ESg" firstAttribute="leading" secondItem="crG-yM-9CW" secondAttribute="leading" constant="8" id="apA-YY-xO8"/>
+                                    <constraint firstItem="eAI-uC-Fg4" firstAttribute="centerX" secondItem="crG-yM-9CW" secondAttribute="centerX" id="eyu-j1-3J1"/>
+                                    <constraint firstItem="c7R-Df-WmU" firstAttribute="leading" secondItem="crG-yM-9CW" secondAttribute="leading" constant="8" id="mVs-6g-Nwu"/>
+                                    <constraint firstAttribute="height" constant="150" id="qNg-RI-hJw"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="crG-yM-9CW" secondAttribute="trailing" constant="8" id="3DP-62-WLE"/>
+                            <constraint firstItem="crG-yM-9CW" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="8" id="J6Z-Mq-LNj"/>
+                            <constraint firstItem="crG-yM-9CW" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="cQk-Wj-147"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backButton" destination="v3F-vm-ESg" id="48H-Pf-zDB"/>
+                        <outlet property="orderSentLabel" destination="c7R-Df-WmU" id="ZG5-0X-Mtt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-57" y="5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="success" width="50" height="50"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
